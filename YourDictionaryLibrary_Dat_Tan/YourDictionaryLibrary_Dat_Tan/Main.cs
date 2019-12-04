@@ -15,6 +15,26 @@ namespace YourDictionaryLibrary_Dat_Tan
         public Main()
         {
             InitializeComponent();
+            this.btnExit.Click += BtnExit_Click;
+            this.btnManage.Click += BtnManage_Click;
+            this.btnInfo.Click += BtnInfo_Click;
+        }
+
+        private void BtnInfo_Click(object sender, EventArgs e)
+        {
+            Infomation info = new Infomation();
+            info.ShowDialog();
+        }
+
+        private void BtnManage_Click(object sender, EventArgs e)
+        {
+            Management manageW = new Management();
+            manageW.ShowDialog();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

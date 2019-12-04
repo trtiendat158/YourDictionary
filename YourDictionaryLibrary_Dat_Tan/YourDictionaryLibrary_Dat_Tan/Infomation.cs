@@ -15,6 +15,12 @@ namespace YourDictionaryLibrary_Dat_Tan
         public Infomation()
         {
             InitializeComponent();
+            this.btnOk.Click += BtnOk_Click;
+        }
+
+        private void BtnOk_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

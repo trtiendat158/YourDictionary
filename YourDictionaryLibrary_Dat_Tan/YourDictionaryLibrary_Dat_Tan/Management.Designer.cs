@@ -165,7 +165,7 @@
             this.btnSave.Size = new System.Drawing.Size(116, 39);
             this.btnSave.TabIndex = 41;
             this.btnSave.Text = "Save";
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
             // lblTitleManage
@@ -247,6 +247,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(943, 714);
             this.Controls.Add(this.panelQuanLy);
             this.Controls.Add(this.grdW);
@@ -258,7 +260,9 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnEdit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Management";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Management";
             this.panelQuanLy.ResumeLayout(false);
             this.panelQuanLy.PerformLayout();
