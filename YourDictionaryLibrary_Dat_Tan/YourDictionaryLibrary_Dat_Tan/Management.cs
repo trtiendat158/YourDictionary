@@ -23,7 +23,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnClose.Click += BtnExit_Click;
             
         }
-        private void manage_button(bool IsEnable)
+        private void manage_Enable_Disable(bool IsEnable)
         {
             if(IsEnable == true)
             {
@@ -38,17 +38,17 @@ namespace YourDictionaryLibrary_Dat_Tan
         } 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            manage_button(true);
-            this.btnSave.Click += BtnSave_Click;
-            this.btnCancel.Click += BtnCancel_Click;           
+            manage_Enable_Disable(true);
+            this.btnSave.Click += BtnSave_Click_Add;
+            this.btnCancel.Click += BtnCancel_Click_Add;           
         }
 
-        private void BtnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click_Add(object sender, EventArgs e)
         {
-            manage_button(false);
+            manage_Enable_Disable(false);
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click_Add(object sender, EventArgs e)
         {
             var EngW = txtEnglishW.Text;
             var Type = (string)cbType.SelectedItem;
@@ -56,7 +56,7 @@ namespace YourDictionaryLibrary_Dat_Tan
 
             this.Business.AddWord(EngW, Type, Meaning);
             MessageBox.Show("Update successfully", "Notication");
-            manage_button(false);
+            manage_Enable_Disable(false);
         }
 
         private void BtnReload_Click(object sender, EventArgs e)
