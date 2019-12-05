@@ -16,7 +16,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new Main_Interface());
         }
     }
 }

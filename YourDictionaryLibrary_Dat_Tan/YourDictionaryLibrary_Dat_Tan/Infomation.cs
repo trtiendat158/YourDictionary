@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    public partial class Help : Form
+    public partial class Infomation : Form
     {
-        public Help()
+        public Infomation()
         {
             InitializeComponent();
             this.btnOk.Click += BtnOk_Click;

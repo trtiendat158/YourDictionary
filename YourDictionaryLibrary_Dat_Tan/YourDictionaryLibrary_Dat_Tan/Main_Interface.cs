@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    public partial class Main : Form
+    public partial class Main_Interface : Form
     {
-        public Main()
+        public Main_Interface()
         {
             InitializeComponent();
             
@@ -28,7 +28,7 @@ namespace YourDictionaryLibrary_Dat_Tan
 
         private void BtnInfo_Click(object sender, EventArgs e)
         {
-            Help info = new Help();
+            Infomation info = new Infomation();
             info.ShowDialog();
         }
 
