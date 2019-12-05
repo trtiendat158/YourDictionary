@@ -67,7 +67,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             var Meaning = rtbMeaning.Text;
 
             this.Business.AddWord(EngW, Type, Meaning);
-            MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK);
+            MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Question);
             manage_Enable_Disable(false);
         }
 
