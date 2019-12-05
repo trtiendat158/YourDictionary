@@ -23,7 +23,7 @@ namespace YourDictionaryLibrary_Dat_Tan
 
         private void BtnLookUp_Click(object sender, EventArgs e)
         {
-            //asxcxc
+            //asxcxcwdsds
         }
 
         private void BtnInfo_Click(object sender, EventArgs e)
