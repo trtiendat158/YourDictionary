@@ -20,9 +20,21 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.Load += Management_Load;
             this.btnAdd.Click += BtnAdd_Click;
             this.btnReload.Click += BtnReload_Click;
+            this.btnDelete.Click += BtnDelete_Click;
             this.btnClose.Click += BtnExit_Click;
             
         }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (grdW.SelectedRows.Count == 1)
+            {
+                var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
+                this.Business.DeleteWord(Word.ID);
+                MessageBox.Show("Delete Compelete");
+            }
+        }
+
         private void manage_Enable_Disable(bool IsEnable)
         {
             if(IsEnable == true)
