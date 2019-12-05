@@ -21,7 +21,8 @@ namespace YourDictionaryLibrary_Dat_Tan
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
+            MessageBox.Show("Do you want to exit ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
         }
     }
 }

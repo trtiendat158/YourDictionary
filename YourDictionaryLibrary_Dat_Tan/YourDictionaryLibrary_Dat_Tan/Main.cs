@@ -18,6 +18,11 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnExit.Click += BtnExit_Click;
             this.btnManage.Click += BtnManage_Click;
             this.btnInfo.Click += BtnInfo_Click;
+            this.btnLookUp.Click += BtnLookUp_Click;
+        }
+
+        private void BtnLookUp_Click(object sender, EventArgs e)
+        {
         }
 
         private void BtnInfo_Click(object sender, EventArgs e)
@@ -33,7 +38,8 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
-        {
+        {  
+            MessageBox.Show("Do you want to exit ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             this.Close();
         }
     }
