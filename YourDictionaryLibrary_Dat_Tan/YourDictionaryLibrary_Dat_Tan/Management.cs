@@ -21,8 +21,46 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnAdd.Click += BtnAdd_Click;
             this.btnReload.Click += BtnReload_Click;
             this.btnDelete.Click += BtnDelete_Click;
+            this.btnEdit.Click += BtnEdit_Click;
             this.btnClose.Click += BtnExit_Click;
             
+        }
+        private void load_Words()
+        {
+            var LoadWord = this.Business.GetWords();
+            grdW.DataSource = LoadWord;
+        }
+        private void Null()
+        {
+            txtEnglishW.Text = null;
+            cbType.SelectedItem = null;
+            rtbMeaning.Text = null;
+        }
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            if (grdW.SelectedRows.Count == 1)
+            {
+                manage_Enable_Disable(true);
+                var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
+                txtEnglishW.Text = Word.English_Word;
+                cbType.SelectedItem = Word.Word_type;
+                rtbMeaning.Text = Word.Meaning;
+                this.btnSave.Click += BtnSave_Click_Edit;
+                this.btnCancel.Click += BtnCancel_Click;
+            }
+        }
+
+        private void BtnSave_Click_Edit(object sender, EventArgs e)
+        {
+            var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
+            var EngW = txtEnglishW.Text;
+            var Type = (string)cbType.SelectedItem;
+            var Meaning = rtbMeaning.Text;
+            this.Business.EditWord(Word.ID, EngW, Type, Meaning);
+            MessageBox.Show("Edit Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            manage_Enable_Disable(false);
+            Null();
+            load_Words();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -31,7 +69,8 @@ namespace YourDictionaryLibrary_Dat_Tan
             {
                 var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
                 this.Business.DeleteWord(Word.ID);
-                MessageBox.Show("Delete Compelete");
+                MessageBox.Show("Delete Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                load_Words();
             }
         }
 
@@ -52,10 +91,10 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             manage_Enable_Disable(true);
             this.btnSave.Click += BtnSave_Click_Add;
-            this.btnCancel.Click += BtnCancel_Click_Add;           
+            this.btnCancel.Click += BtnCancel_Click;           
         }
 
-        private void BtnCancel_Click_Add(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             manage_Enable_Disable(false);
         }
@@ -67,14 +106,15 @@ namespace YourDictionaryLibrary_Dat_Tan
             var Meaning = rtbMeaning.Text;
 
             this.Business.AddWord(EngW, Type, Meaning);
-            MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
             manage_Enable_Disable(false);
+            Null();
+            load_Words();
         }
 
         private void BtnReload_Click(object sender, EventArgs e)
         {
-            var LoadWord = this.Business.GetWords();
-            grdW.DataSource = LoadWord;
+            load_Words();
         }
 
         private void Management_Load(object sender, EventArgs e)
