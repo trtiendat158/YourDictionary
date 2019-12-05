@@ -55,7 +55,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             var Meaning = rtbMeaning.Text;
 
             this.Business.AddWord(EngW, Type, Meaning);
-            MessageBox.Show("Update successfully", "Notication");
+            MessageBox.Show("Update successfully", "Notication", MessageBoxButtons.OK);
             manage_button(false);
         }
 
