@@ -67,7 +67,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             var Meaning = rtbMeaning.Text;
 
             this.Business.AddWord(EngW, Type, Meaning);
-            MessageBox.Show("Update successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Question);
             manage_Enable_Disable(false);
         }
 
@@ -85,7 +85,6 @@ namespace YourDictionaryLibrary_Dat_Tan
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            //4444
             this.Close();
             MessageBox.Show("Do you want to exit ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
         }
