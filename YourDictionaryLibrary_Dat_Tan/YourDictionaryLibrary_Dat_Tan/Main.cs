@@ -15,7 +15,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         public Main()
         {
             InitializeComponent();
-            this.btnExit.Click += BtnExit_Click;
+            
             this.btnManage.Click += BtnManage_Click;
             this.btnInfo.Click += BtnInfo_Click;
             this.btnLookUp.Click += BtnLookUp_Click;
@@ -23,12 +23,12 @@ namespace YourDictionaryLibrary_Dat_Tan
 
         private void BtnLookUp_Click(object sender, EventArgs e)
         {
-            //asxcxcwdsds
+            MessageBox.Show("This word don't exist, do you want to look up this in another web ?","Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
 
         private void BtnInfo_Click(object sender, EventArgs e)
         {
-            Infomation info = new Infomation();
+            Help info = new Help();
             info.ShowDialog();
         }
 
@@ -38,10 +38,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             manageW.ShowDialog();
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
-        {  
-            MessageBox.Show("Do you want to exit ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            this.Close();
-        }
+        
     }
 }

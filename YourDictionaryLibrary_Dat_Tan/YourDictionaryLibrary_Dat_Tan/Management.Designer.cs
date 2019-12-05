@@ -42,7 +42,7 @@
             this.lblTitleManage = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panelQuanLy.SuspendLayout();
@@ -205,18 +205,18 @@
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnExit
+            // btnClose
             // 
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(796, 309);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(116, 38);
-            this.btnExit.TabIndex = 35;
-            this.btnExit.Text = "Exit";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Red;
+            this.btnClose.Location = new System.Drawing.Point(796, 309);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(116, 38);
+            this.btnClose.TabIndex = 35;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // btnReload
             // 
@@ -257,7 +257,7 @@
             this.Controls.Add(this.lblTitleManage);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnEdit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -287,7 +287,7 @@
         private System.Windows.Forms.Label lblTitleManage;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnEdit;
     }

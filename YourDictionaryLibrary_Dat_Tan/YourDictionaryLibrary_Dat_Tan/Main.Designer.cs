@@ -30,14 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnManage = new System.Windows.Forms.Button();
             this.btnInfo = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnLookUp = new System.Windows.Forms.Button();
             this.btnSpeak = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMeaning = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.cbWord = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -53,29 +52,16 @@
             this.lblTitle.TabIndex = 31;
             this.lblTitle.Text = "YOUR DICTIONARY LIBRARY";
             // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(626, 89);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(94, 38);
-            this.btnExit.TabIndex = 36;
-            this.btnExit.Text = "Exit";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExit.UseVisualStyleBackColor = true;
-            // 
             // btnManage
             // 
             this.btnManage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManage.ForeColor = System.Drawing.Color.Black;
+            this.btnManage.Image = ((System.Drawing.Image)(resources.GetObject("btnManage.Image")));
             this.btnManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManage.Location = new System.Drawing.Point(368, 89);
+            this.btnManage.Location = new System.Drawing.Point(455, 89);
             this.btnManage.Margin = new System.Windows.Forms.Padding(4);
             this.btnManage.Name = "btnManage";
-            this.btnManage.Size = new System.Drawing.Size(94, 38);
+            this.btnManage.Size = new System.Drawing.Size(120, 38);
             this.btnManage.TabIndex = 35;
             this.btnManage.Text = "Manage";
             this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -85,42 +71,27 @@
             // 
             this.btnInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.ForeColor = System.Drawing.Color.Black;
+            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
             this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.Location = new System.Drawing.Point(496, 89);
+            this.btnInfo.Location = new System.Drawing.Point(583, 89);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(94, 38);
+            this.btnInfo.Size = new System.Drawing.Size(103, 38);
             this.btnInfo.TabIndex = 34;
             this.btnInfo.Text = "Info";
             this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInfo.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 148);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 34);
-            this.textBox1.TabIndex = 37;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 202);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(208, 436);
-            this.listBox1.TabIndex = 38;
-            // 
             // btnLookUp
             // 
             this.btnLookUp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLookUp.ForeColor = System.Drawing.Color.Black;
+            this.btnLookUp.Image = ((System.Drawing.Image)(resources.GetObject("btnLookUp.Image")));
             this.btnLookUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLookUp.Location = new System.Drawing.Point(244, 148);
+            this.btnLookUp.Location = new System.Drawing.Point(223, 148);
             this.btnLookUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnLookUp.Name = "btnLookUp";
-            this.btnLookUp.Size = new System.Drawing.Size(94, 38);
+            this.btnLookUp.Size = new System.Drawing.Size(133, 38);
             this.btnLookUp.TabIndex = 39;
             this.btnLookUp.Text = "Look up";
             this.btnLookUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -130,24 +101,43 @@
             // 
             this.btnSpeak.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpeak.ForeColor = System.Drawing.Color.Black;
+            this.btnSpeak.Image = ((System.Drawing.Image)(resources.GetObject("btnSpeak.Image")));
             this.btnSpeak.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSpeak.Location = new System.Drawing.Point(244, 202);
+            this.btnSpeak.Location = new System.Drawing.Point(337, 89);
             this.btnSpeak.Margin = new System.Windows.Forms.Padding(4);
             this.btnSpeak.Name = "btnSpeak";
-            this.btnSpeak.Size = new System.Drawing.Size(94, 38);
+            this.btnSpeak.Size = new System.Drawing.Size(110, 38);
             this.btnSpeak.TabIndex = 40;
             this.btnSpeak.Text = "Speak";
             this.btnSpeak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSpeak.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtMeaning
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(377, 148);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(343, 490);
-            this.textBox2.TabIndex = 41;
+            this.txtMeaning.Enabled = false;
+            this.txtMeaning.Location = new System.Drawing.Point(378, 199);
+            this.txtMeaning.Multiline = true;
+            this.txtMeaning.Name = "txtMeaning";
+            this.txtMeaning.Size = new System.Drawing.Size(308, 436);
+            this.txtMeaning.TabIndex = 41;
+            // 
+            // txtType
+            // 
+            this.txtType.Enabled = false;
+            this.txtType.Location = new System.Drawing.Point(378, 148);
+            this.txtType.Multiline = true;
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(308, 34);
+            this.txtType.TabIndex = 42;
+            // 
+            // cbWord
+            // 
+            this.cbWord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cbWord.FormattingEnabled = true;
+            this.cbWord.Location = new System.Drawing.Point(13, 148);
+            this.cbWord.Name = "cbWord";
+            this.cbWord.Size = new System.Drawing.Size(190, 489);
+            this.cbWord.TabIndex = 43;
             // 
             // Main
             // 
@@ -155,14 +145,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(732, 674);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(698, 647);
+            this.Controls.Add(this.cbWord);
+            this.Controls.Add(this.txtType);
+            this.Controls.Add(this.txtMeaning);
             this.Controls.Add(this.btnSpeak);
             this.Controls.Add(this.btnLookUp);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnManage);
             this.Controls.Add(this.btnInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -176,14 +165,13 @@
 
         #endregion
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnManage;
         private System.Windows.Forms.Button btnInfo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnLookUp;
         private System.Windows.Forms.Button btnSpeak;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMeaning;
+        private System.Windows.Forms.TextBox txtType;
+        internal System.Windows.Forms.ComboBox cbWord;
     }
 }
 

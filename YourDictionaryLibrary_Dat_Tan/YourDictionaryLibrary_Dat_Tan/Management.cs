@@ -15,7 +15,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         public Management()
         {
             InitializeComponent();
-            this.btnExit.Click += BtnExit_Click;
+            this.btnClose.Click += BtnExit_Click;
             
         }
 
