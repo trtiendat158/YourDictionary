@@ -22,7 +22,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnReload.Click += BtnReload_Click;
             this.btnDelete.Click += BtnDelete_Click;
             this.btnEdit.Click += BtnEdit_Click;
-            this.btnClose.Click += BtnExit_Click;
+            this.btnClose.Click += BtnClose_Click;
             
         }
         private void load_Words()
@@ -120,10 +120,10 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             load_Words();
         }
-        private void BtnExit_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            MessageBox.Show("Do you want to exit ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+            MessageBox.Show("Do you want to close ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
         }
     }
 }

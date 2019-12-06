@@ -129,6 +129,8 @@
             // 
             // cbWord
             // 
+            this.cbWord.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbWord.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbWord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbWord.FormattingEnabled = true;
             this.cbWord.Location = new System.Drawing.Point(10, 120);

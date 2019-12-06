@@ -70,6 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browser.Designer.cs">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Infomation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Words_Management.cs" />
+    <EmbeddedResource Include="Browser.resx">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Infomation.resx">
       <DependentUpon>Infomation.cs</DependentUpon>
     </EmbeddedResource>
