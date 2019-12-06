@@ -13,6 +13,7 @@ namespace YourDictionaryLibrary_Dat_Tan
     public partial class Main_Interface : Form
     {
         private Words_Management Business;
+        WebBrowser wb;
         public Main_Interface()
         {
             InitializeComponent();
@@ -21,7 +22,42 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnManage.Click += BtnManage_Click;
             this.btnInfo.Click += BtnInfo_Click;
             this.btnLookUp.Click += BtnLookUp_Click;
+            this.btnSpeak.Click += BtnSpeak_Click;
+            wb = new WebBrowser();
+            wb.Width = 0;
+            wb.Height = 0;
+            wb.Visible = false;
+            wb.ScriptErrorsSuppressed = true;
+            wb.Navigate("https://responsivevoice.org/");
         }
+        private void SetText(string data)
+        {
+            HtmlElement element = wb.Document.GetElementById("text");
+            element.SetAttribute("value", data);
+        }
+        private void Speak()
+        {
+            HtmlElement element = wb.Document.GetElementById("playbutton");
+            element.InvokeMember("click");
+        }
+        private void speak(string data)
+        {
+            SetText(data);
+            Speak();
+        }
+        private void BtnSpeak_Click(object sender, EventArgs e)
+        {
+            if(cbWord.SelectedItem == null)
+            {
+                MessageBox.Show("Cant Find Word in your list Data");
+            }
+            else
+            {
+                var data = cbWord.SelectedItem as Word;
+                speak(data.English_Word);
+            }
+        }
+
         private void LoadData()
         {
             this.cbWord.DataSource = this.Business.GetWords();
