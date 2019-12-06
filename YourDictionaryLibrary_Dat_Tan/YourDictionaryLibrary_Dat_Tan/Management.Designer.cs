@@ -51,6 +51,7 @@
             // 
             // txtEnglishW
             // 
+            this.txtEnglishW.Enabled = false;
             this.txtEnglishW.Location = new System.Drawing.Point(3, 50);
             this.txtEnglishW.Name = "txtEnglishW";
             this.txtEnglishW.Size = new System.Drawing.Size(198, 20);
@@ -108,6 +109,7 @@
             // 
             // rtbMeaning
             // 
+            this.rtbMeaning.Enabled = false;
             this.rtbMeaning.Location = new System.Drawing.Point(242, 50);
             this.rtbMeaning.Name = "rtbMeaning";
             this.rtbMeaning.Size = new System.Drawing.Size(269, 106);
@@ -119,6 +121,7 @@
             this.cbType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbType.Enabled = false;
             this.cbType.FormattingEnabled = true;
             this.cbType.Items.AddRange(new object[] {
             "Verb",
@@ -136,7 +139,7 @@
             this.grdW.AllowUserToDeleteRows = false;
             this.grdW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdW.Location = new System.Drawing.Point(10, 298);
-            this.grdW.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grdW.Margin = new System.Windows.Forms.Padding(2);
             this.grdW.Name = "grdW";
             this.grdW.ReadOnly = true;
             this.grdW.RowHeadersWidth = 51;
@@ -261,7 +264,7 @@
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnEdit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Management";

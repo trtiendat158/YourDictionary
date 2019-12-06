@@ -80,11 +80,17 @@ namespace YourDictionaryLibrary_Dat_Tan
             {
                 this.btnSave.Enabled = true;
                 this.btnCancel.Enabled = true;
+                this.txtEnglishW.Enabled = true;
+                this.cbType.Enabled = true;
+                this.rtbMeaning.Enabled = true;
             }
             else
             {
                 this.btnSave.Enabled = false;
                 this.btnCancel.Enabled = false;
+                this.txtEnglishW.Enabled = false;
+                this.cbType.Enabled = false;
+                this.rtbMeaning.Enabled = false;
             }
         } 
         private void BtnAdd_Click(object sender, EventArgs e)
