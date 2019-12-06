@@ -14,6 +14,7 @@ namespace YourDictionaryLibrary_Dat_Tan
     {
         private Words_Management Business;
         WebBrowser wb;
+        Speak speakEngW;
         public Main_Interface()
         {
             InitializeComponent();
@@ -23,38 +24,25 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnInfo.Click += BtnInfo_Click;
             this.btnLookUp.Click += BtnLookUp_Click;
             this.btnSpeak.Click += BtnSpeak_Click;
-            wb = new WebBrowser();
-            wb.Width = 0;
-            wb.Height = 0;
-            wb.Visible = false;
-            wb.ScriptErrorsSuppressed = true;
-            wb.Navigate("https://responsivevoice.org/");
+            speakEngW = new Speak();
+            
         }
-        private void SetText(string data)
-        {
-            HtmlElement element = wb.Document.GetElementById("text");
-            element.SetAttribute("value", data);
-        }
-        private void Speak()
-        {
-            HtmlElement element = wb.Document.GetElementById("playbutton");
-            element.InvokeMember("click");
-        }
-        private void speak(string data)
-        {
-            SetText(data);
-            Speak();
-        }
+
+        /// <summary>
+        /// Bắt sự kiện btnSpeak.click lấy dữ liêu từ combobox vào speakEng,speak
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnSpeak_Click(object sender, EventArgs e)
         {
-            if(cbWord.SelectedItem == null)
+            if (cbWord.SelectedItem == null)
             {
                 MessageBox.Show("Cant Find Word in your list Data");
             }
             else
             {
                 var data = cbWord.SelectedItem as Word;
-                speak(data.English_Word);
+                this.speakEngW.speak(data.English_Word);
             }
         }
 
