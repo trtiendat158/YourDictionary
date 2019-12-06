@@ -43,6 +43,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             {
                 var data = cbWord.SelectedItem as Word;
                 this.speakEngW.speak(data.English_Word);
+                
             }
         }
 
@@ -70,8 +71,8 @@ namespace YourDictionaryLibrary_Dat_Tan
             else
             {
                 var data = cbWord.SelectedItem as Word;
-                txtType.Text = data.Word_type;
-                txtMeaning.Text = data.Meaning;
+                txtType.Text = "Type of word:    "+data.Word_type;
+                txtMeaning.Text = "Meaning of word:    "+data.Meaning;
             }          
         }
 
