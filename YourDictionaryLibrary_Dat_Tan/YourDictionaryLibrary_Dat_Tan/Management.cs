@@ -23,6 +23,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnDelete.Click += BtnDelete_Click;
             this.btnEdit.Click += BtnEdit_Click;
             this.btnClose.Click += BtnClose_Click;
+            grdW.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
         }
         private void load_Words()
@@ -125,5 +126,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.Close();
             MessageBox.Show("Do you want to close ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
         }
+
+        
     }
 }

@@ -52,9 +52,10 @@
             // txtEnglishW
             // 
             this.txtEnglishW.Enabled = false;
-            this.txtEnglishW.Location = new System.Drawing.Point(3, 50);
+            this.txtEnglishW.Location = new System.Drawing.Point(4, 62);
+            this.txtEnglishW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEnglishW.Name = "txtEnglishW";
-            this.txtEnglishW.Size = new System.Drawing.Size(198, 20);
+            this.txtEnglishW.Size = new System.Drawing.Size(263, 22);
             this.txtEnglishW.TabIndex = 0;
             // 
             // panelQuanLy
@@ -66,9 +67,10 @@
             this.panelQuanLy.Controls.Add(this.rtbMeaning);
             this.panelQuanLy.Controls.Add(this.cbType);
             this.panelQuanLy.Controls.Add(this.txtEnglishW);
-            this.panelQuanLy.Location = new System.Drawing.Point(25, 49);
+            this.panelQuanLy.Location = new System.Drawing.Point(33, 60);
+            this.panelQuanLy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelQuanLy.Name = "panelQuanLy";
-            this.panelQuanLy.Size = new System.Drawing.Size(566, 187);
+            this.panelQuanLy.Size = new System.Drawing.Size(755, 230);
             this.panelQuanLy.TabIndex = 42;
             // 
             // lblVnW
@@ -77,9 +79,10 @@
             this.lblVnW.BackColor = System.Drawing.Color.Transparent;
             this.lblVnW.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVnW.ForeColor = System.Drawing.Color.White;
-            this.lblVnW.Location = new System.Drawing.Point(238, 11);
+            this.lblVnW.Location = new System.Drawing.Point(317, 14);
+            this.lblVnW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVnW.Name = "lblVnW";
-            this.lblVnW.Size = new System.Drawing.Size(108, 22);
+            this.lblVnW.Size = new System.Drawing.Size(137, 26);
             this.lblVnW.TabIndex = 3;
             this.lblVnW.Text = "Vietnamese:";
             // 
@@ -89,9 +92,10 @@
             this.lblTypeW.BackColor = System.Drawing.Color.Transparent;
             this.lblTypeW.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTypeW.ForeColor = System.Drawing.Color.White;
-            this.lblTypeW.Location = new System.Drawing.Point(-1, 96);
+            this.lblTypeW.Location = new System.Drawing.Point(-1, 118);
+            this.lblTypeW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTypeW.Name = "lblTypeW";
-            this.lblTypeW.Size = new System.Drawing.Size(100, 22);
+            this.lblTypeW.Size = new System.Drawing.Size(128, 26);
             this.lblTypeW.TabIndex = 3;
             this.lblTypeW.Text = "Word type:";
             // 
@@ -101,18 +105,20 @@
             this.lblEnlishW.BackColor = System.Drawing.Color.Transparent;
             this.lblEnlishW.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnlishW.ForeColor = System.Drawing.Color.White;
-            this.lblEnlishW.Location = new System.Drawing.Point(-1, 11);
+            this.lblEnlishW.Location = new System.Drawing.Point(-1, 14);
+            this.lblEnlishW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnlishW.Name = "lblEnlishW";
-            this.lblEnlishW.Size = new System.Drawing.Size(123, 22);
+            this.lblEnlishW.Size = new System.Drawing.Size(156, 26);
             this.lblEnlishW.TabIndex = 3;
             this.lblEnlishW.Text = "English word:";
             // 
             // rtbMeaning
             // 
             this.rtbMeaning.Enabled = false;
-            this.rtbMeaning.Location = new System.Drawing.Point(242, 50);
+            this.rtbMeaning.Location = new System.Drawing.Point(323, 62);
+            this.rtbMeaning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbMeaning.Name = "rtbMeaning";
-            this.rtbMeaning.Size = new System.Drawing.Size(269, 106);
+            this.rtbMeaning.Size = new System.Drawing.Size(357, 130);
             this.rtbMeaning.TabIndex = 2;
             this.rtbMeaning.Text = "";
             // 
@@ -128,9 +134,10 @@
             "Noun",
             "Adjective ",
             "Adverb "});
-            this.cbType.Location = new System.Drawing.Point(3, 135);
+            this.cbType.Location = new System.Drawing.Point(4, 166);
+            this.cbType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(198, 21);
+            this.cbType.Size = new System.Drawing.Size(263, 24);
             this.cbType.TabIndex = 1;
             // 
             // grdW
@@ -138,14 +145,15 @@
             this.grdW.AllowUserToAddRows = false;
             this.grdW.AllowUserToDeleteRows = false;
             this.grdW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdW.Location = new System.Drawing.Point(10, 298);
-            this.grdW.Margin = new System.Windows.Forms.Padding(2);
+            this.grdW.Location = new System.Drawing.Point(13, 367);
+            this.grdW.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grdW.Name = "grdW";
             this.grdW.ReadOnly = true;
-            this.grdW.RowHeadersWidth = 51;
+            this.grdW.RowHeadersVisible = false;
+            this.grdW.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.grdW.RowTemplate.Height = 24;
             this.grdW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdW.Size = new System.Drawing.Size(686, 271);
+            this.grdW.Size = new System.Drawing.Size(915, 334);
             this.grdW.TabIndex = 43;
             // 
             // btnCancel
@@ -155,9 +163,10 @@
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Red;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(597, 174);
+            this.btnCancel.Location = new System.Drawing.Point(796, 214);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(87, 31);
+            this.btnCancel.Size = new System.Drawing.Size(116, 38);
             this.btnCancel.TabIndex = 40;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -169,9 +178,10 @@
             this.btnSave.Enabled = false;
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Red;
-            this.btnSave.Location = new System.Drawing.Point(597, 99);
+            this.btnSave.Location = new System.Drawing.Point(796, 122);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(87, 32);
+            this.btnSave.Size = new System.Drawing.Size(116, 39);
             this.btnSave.TabIndex = 41;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -183,18 +193,20 @@
             this.lblTitleManage.BackColor = System.Drawing.Color.Transparent;
             this.lblTitleManage.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTitleManage.ForeColor = System.Drawing.Color.White;
-            this.lblTitleManage.Location = new System.Drawing.Point(207, 11);
+            this.lblTitleManage.Location = new System.Drawing.Point(276, 14);
+            this.lblTitleManage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleManage.Name = "lblTitleManage";
-            this.lblTitleManage.Size = new System.Drawing.Size(279, 26);
+            this.lblTitleManage.Size = new System.Drawing.Size(355, 35);
             this.lblTitleManage.TabIndex = 39;
             this.lblTitleManage.Text = "MANAGE DICTIONARY";
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(175, 252);
+            this.btnAdd.Location = new System.Drawing.Point(233, 310);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 31);
+            this.btnAdd.Size = new System.Drawing.Size(107, 38);
             this.btnAdd.TabIndex = 37;
             this.btnAdd.Text = "Add";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -203,9 +215,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(457, 252);
+            this.btnDelete.Location = new System.Drawing.Point(609, 310);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(77, 31);
+            this.btnDelete.Size = new System.Drawing.Size(103, 38);
             this.btnDelete.TabIndex = 36;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -215,9 +228,10 @@
             // 
             this.btnClose.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Red;
-            this.btnClose.Location = new System.Drawing.Point(597, 251);
+            this.btnClose.Location = new System.Drawing.Point(796, 309);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(87, 31);
+            this.btnClose.Size = new System.Drawing.Size(116, 38);
             this.btnClose.TabIndex = 35;
             this.btnClose.Text = "Close";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -227,9 +241,10 @@
             // 
             this.btnReload.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReload.ForeColor = System.Drawing.Color.Black;
-            this.btnReload.Location = new System.Drawing.Point(23, 252);
+            this.btnReload.Location = new System.Drawing.Point(31, 310);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(90, 31);
+            this.btnReload.Size = new System.Drawing.Size(120, 38);
             this.btnReload.TabIndex = 34;
             this.btnReload.Text = "Reload";
             this.btnReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -238,9 +253,10 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(317, 251);
+            this.btnEdit.Location = new System.Drawing.Point(423, 309);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(78, 31);
+            this.btnEdit.Size = new System.Drawing.Size(104, 38);
             this.btnEdit.TabIndex = 38;
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -248,11 +264,11 @@
             // 
             // Management
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(707, 580);
+            this.ClientSize = new System.Drawing.Size(943, 714);
             this.Controls.Add(this.panelQuanLy);
             this.Controls.Add(this.grdW);
             this.Controls.Add(this.btnCancel);
@@ -265,7 +281,7 @@
             this.Controls.Add(this.btnEdit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Management";
