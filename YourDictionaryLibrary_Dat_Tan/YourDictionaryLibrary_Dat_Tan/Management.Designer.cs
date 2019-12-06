@@ -45,6 +45,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPhonetic = new System.Windows.Forms.TextBox();
             this.panelQuanLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdW)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             // 
             this.txtEnglishW.Enabled = false;
             this.txtEnglishW.Location = new System.Drawing.Point(4, 62);
-            this.txtEnglishW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEnglishW.Margin = new System.Windows.Forms.Padding(4);
             this.txtEnglishW.Name = "txtEnglishW";
             this.txtEnglishW.Size = new System.Drawing.Size(263, 22);
             this.txtEnglishW.TabIndex = 0;
@@ -61,6 +63,8 @@
             // panelQuanLy
             // 
             this.panelQuanLy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelQuanLy.BackgroundImage")));
+            this.panelQuanLy.Controls.Add(this.txtPhonetic);
+            this.panelQuanLy.Controls.Add(this.label1);
             this.panelQuanLy.Controls.Add(this.lblVnW);
             this.panelQuanLy.Controls.Add(this.lblTypeW);
             this.panelQuanLy.Controls.Add(this.lblEnlishW);
@@ -68,7 +72,7 @@
             this.panelQuanLy.Controls.Add(this.cbType);
             this.panelQuanLy.Controls.Add(this.txtEnglishW);
             this.panelQuanLy.Location = new System.Drawing.Point(33, 60);
-            this.panelQuanLy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelQuanLy.Margin = new System.Windows.Forms.Padding(4);
             this.panelQuanLy.Name = "panelQuanLy";
             this.panelQuanLy.Size = new System.Drawing.Size(755, 230);
             this.panelQuanLy.TabIndex = 42;
@@ -82,9 +86,9 @@
             this.lblVnW.Location = new System.Drawing.Point(317, 14);
             this.lblVnW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVnW.Name = "lblVnW";
-            this.lblVnW.Size = new System.Drawing.Size(137, 26);
+            this.lblVnW.Size = new System.Drawing.Size(111, 26);
             this.lblVnW.TabIndex = 3;
-            this.lblVnW.Text = "Vietnamese:";
+            this.lblVnW.Text = "Meaning:";
             // 
             // lblTypeW
             // 
@@ -115,10 +119,10 @@
             // rtbMeaning
             // 
             this.rtbMeaning.Enabled = false;
-            this.rtbMeaning.Location = new System.Drawing.Point(323, 62);
-            this.rtbMeaning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbMeaning.Location = new System.Drawing.Point(322, 44);
+            this.rtbMeaning.Margin = new System.Windows.Forms.Padding(4);
             this.rtbMeaning.Name = "rtbMeaning";
-            this.rtbMeaning.Size = new System.Drawing.Size(357, 130);
+            this.rtbMeaning.Size = new System.Drawing.Size(357, 61);
             this.rtbMeaning.TabIndex = 2;
             this.rtbMeaning.Text = "";
             // 
@@ -135,7 +139,7 @@
             "Adjective ",
             "Adverb "});
             this.cbType.Location = new System.Drawing.Point(4, 166);
-            this.cbType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbType.Margin = new System.Windows.Forms.Padding(4);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(263, 24);
             this.cbType.TabIndex = 1;
@@ -164,7 +168,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.Red;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.Location = new System.Drawing.Point(796, 214);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(116, 38);
             this.btnCancel.TabIndex = 40;
@@ -179,7 +183,7 @@
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Red;
             this.btnSave.Location = new System.Drawing.Point(796, 122);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(116, 39);
             this.btnSave.TabIndex = 41;
@@ -204,7 +208,7 @@
             // 
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(233, 310);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(107, 38);
             this.btnAdd.TabIndex = 37;
@@ -216,7 +220,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(609, 310);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(103, 38);
             this.btnDelete.TabIndex = 36;
@@ -229,7 +233,7 @@
             this.btnClose.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Red;
             this.btnClose.Location = new System.Drawing.Point(796, 309);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(116, 38);
             this.btnClose.TabIndex = 35;
@@ -242,7 +246,7 @@
             this.btnReload.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReload.ForeColor = System.Drawing.Color.Black;
             this.btnReload.Location = new System.Drawing.Point(31, 310);
-            this.btnReload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(120, 38);
             this.btnReload.TabIndex = 34;
@@ -254,13 +258,35 @@
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(423, 309);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(104, 38);
             this.btnEdit.TabIndex = 38;
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(317, 134);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 26);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Phonetic:";
+            // 
+            // txtPhonetic
+            // 
+            this.txtPhonetic.Enabled = false;
+            this.txtPhonetic.Location = new System.Drawing.Point(322, 164);
+            this.txtPhonetic.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhonetic.Name = "txtPhonetic";
+            this.txtPhonetic.Size = new System.Drawing.Size(357, 22);
+            this.txtPhonetic.TabIndex = 5;
             // 
             // Management
             // 
@@ -311,5 +337,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.TextBox txtPhonetic;
+        private System.Windows.Forms.Label label1;
     }
 }

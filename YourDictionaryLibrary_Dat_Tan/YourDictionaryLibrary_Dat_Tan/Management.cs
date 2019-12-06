@@ -23,7 +23,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnDelete.Click += BtnDelete_Click;
             this.btnEdit.Click += BtnEdit_Click;
             this.btnClose.Click += BtnClose_Click;
-            grdW.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;//lapdaycot
+            grdW.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
         }
         private void load_Words()

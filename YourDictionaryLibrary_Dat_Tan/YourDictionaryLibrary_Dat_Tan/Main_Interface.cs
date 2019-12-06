@@ -71,8 +71,9 @@ namespace YourDictionaryLibrary_Dat_Tan
             else
             {
                 var data = cbWord.SelectedItem as Word;
-                txtType.Text = "Type of word:    "+data.Word_type;
-                txtMeaning.Text = "Meaning of word:    "+data.Meaning;
+                
+                txtMeaning.Text = "Meaning:\r\n"+"  "+data.Meaning +"\r\n \r\n"+ 
+                    "Type:" + "  " + data.Word_type;
             }          
         }
 
