@@ -38,6 +38,12 @@ namespace YourDictionaryLibrary_Dat_Tan
             manageW.ShowDialog();
         }
 
-        
+        private void Main_Interface_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(MessageBox.Show("Are You Sure Want To Exit", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)!= DialogResult.Yes)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
