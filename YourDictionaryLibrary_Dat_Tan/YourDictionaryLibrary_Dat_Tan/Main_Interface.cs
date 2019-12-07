@@ -26,8 +26,15 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnSpeak.Click += BtnSpeak_Click;
             this.cbWord.KeyDown += CbWord_KeyDown;
             this.btnOpen.Click += BtnOpen_Click;
+            this.button1.Click += Button1_Click;
             speakEngW = new Speak();
             
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            var form = new Test();
+            form.ShowDialog();
         }
 
         private void BtnOpen_Click(object sender, EventArgs e)
@@ -35,7 +42,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             Save_Data saveF = new Save_Data();
             saveF.ShowDialog();
         }
-
         private void CbWord_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -43,7 +49,6 @@ namespace YourDictionaryLibrary_Dat_Tan
                 btnLookUp.PerformClick();
             }
         }
-
         /// <summary>
         /// Bắt sự kiện btnSpeak.click lấy dữ liêu từ combobox vào speakEng,speak
         /// </summary>
@@ -62,7 +67,6 @@ namespace YourDictionaryLibrary_Dat_Tan
                 
             }
         }
-
         private void LoadData()
         {
             this.cbWord.DataSource = this.Business.GetWords();
@@ -100,14 +104,12 @@ namespace YourDictionaryLibrary_Dat_Tan
             Infomation info = new Infomation();
             info.ShowDialog();
         }
-
         private void BtnManage_Click(object sender, EventArgs e)
         {
             Management manageW = new Management();
             manageW.ShowDialog();
             LoadData();
         }
-
         private void Main_Interface_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(MessageBox.Show("Are You Sure Want To Exit", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)!= DialogResult.Yes)
