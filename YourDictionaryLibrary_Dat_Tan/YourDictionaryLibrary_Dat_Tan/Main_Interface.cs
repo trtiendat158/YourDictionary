@@ -71,12 +71,11 @@ namespace YourDictionaryLibrary_Dat_Tan
             else
             {
                 var data = cbWord.SelectedItem as Word;
-                
-                txtMeaning.Text = "Meaning:\r\n"+"  "+data.Meaning +"\r\n \r\n"+ 
-                    "Type:" + "  " + data.Word_type;
+
+                rtbMeaningW.Text = "Type:" + "  " + data.Word_type + "\r\n" +
+                    "Meaning:\r\n" + "  " + data.Meaning;
             }          
         }
-
         private void BtnInfo_Click(object sender, EventArgs e)
         {
             Infomation info = new Infomation();

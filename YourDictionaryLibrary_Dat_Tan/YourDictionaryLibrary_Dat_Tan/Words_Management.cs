@@ -8,6 +8,7 @@ namespace YourDictionaryLibrary_Dat_Tan
 {
     class Words_Management
     {
+        private readonly Words_DataEntities db;
         public Word[] GetWords()
         {
             var Data = new Words_DataEntities();
@@ -21,7 +22,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             var Word = Data.Words.Find(id);
             return Word;
         }
-
         public void AddWord(string EngW, string WordType, string Meaning)
         {
             var NewWord = new Word();
