@@ -25,9 +25,9 @@ namespace YourDictionaryLibrary_Dat_Tan
         public void AddWord(string EngW, string WordType, string Meaning)
         {
             var NewWord = new Word();
-            NewWord.English_Word = EngW;
+            NewWord.English_Word = EngW.ToLower();
             NewWord.Word_type = WordType;
-            NewWord.Meaning = Meaning;
+            NewWord.Meaning = Meaning.ToLower();
 
             var Data = new Words_DataEntities();
             Data.Words.Add(NewWord);
@@ -38,9 +38,9 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             var Data = new Words_DataEntities();
             var Word = Data.Words.Find(id);
-            Word.English_Word = EngW;
+            Word.English_Word = EngW.ToLower();
             Word.Word_type = WordType;
-            Word.Meaning = Meaning;
+            Word.Meaning = Meaning.ToLower();
 
             Data.Entry(Word).State = System.Data.Entity.EntityState.Modified;
             Data.SaveChanges();

@@ -24,8 +24,17 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnInfo.Click += BtnInfo_Click;
             this.btnLookUp.Click += BtnLookUp_Click;
             this.btnSpeak.Click += BtnSpeak_Click;
+            this.cbWord.KeyDown += CbWord_KeyDown;
             speakEngW = new Speak();
             
+        }
+
+        private void CbWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLookUp.PerformClick();
+            }
         }
 
         /// <summary>
