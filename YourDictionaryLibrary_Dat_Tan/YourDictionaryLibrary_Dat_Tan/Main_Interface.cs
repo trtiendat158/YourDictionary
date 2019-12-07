@@ -57,7 +57,6 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             LoadData();
         }
-
         private void BtnLookUp_Click(object sender, EventArgs e)
         {
             if(cbWord.SelectedItem == null)
@@ -71,10 +70,14 @@ namespace YourDictionaryLibrary_Dat_Tan
             else
             {
                 var data = cbWord.SelectedItem as Word;
-
                 rtbMeaningW.Text = "Type:" + "  " + data.Word_type + "\r\n" +
-                    "Meaning:\r\n" + "  " + data.Meaning;
-            }          
+                    "Meaning:\r\n" + " \t" + data.Meaning;
+             
+                rtbMeaningW.Find("Type:");
+                rtbMeaningW.SelectionColor = Color.Red;
+                rtbMeaningW.Find("Meaning");
+                rtbMeaningW.SelectionColor = Color.Blue;
+            }
         }
         private void BtnInfo_Click(object sender, EventArgs e)
         {

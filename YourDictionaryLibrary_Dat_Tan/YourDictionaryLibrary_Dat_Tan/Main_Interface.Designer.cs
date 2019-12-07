@@ -126,6 +126,7 @@
             // rtbMeaningW
             // 
             this.rtbMeaningW.Enabled = false;
+            this.rtbMeaningW.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMeaningW.Location = new System.Drawing.Point(379, 148);
             this.rtbMeaningW.Name = "rtbMeaningW";
             this.rtbMeaningW.Size = new System.Drawing.Size(307, 487);
