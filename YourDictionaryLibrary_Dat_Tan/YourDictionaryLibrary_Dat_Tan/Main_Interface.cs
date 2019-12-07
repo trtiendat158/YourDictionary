@@ -81,7 +81,7 @@ namespace YourDictionaryLibrary_Dat_Tan
                 var data = cbWord.SelectedItem as Word;
                 rtbMeaningW.Text = "Type:" + "  " + data.Word_type + "\r\n" +
                     "Meaning:\r\n" + " \t" + data.Meaning;
-             
+             // change color type, meaning
                 rtbMeaningW.Find("Type:");
                 rtbMeaningW.SelectionColor = Color.Red;
                 rtbMeaningW.Find("Meaning");
