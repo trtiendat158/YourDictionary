@@ -19,50 +19,66 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.Business = new Words_Management();
             this.Load += Management_Load;
             this.btnAdd.Click += BtnAdd_Click;
-            this.btnReload.Click += BtnReload_Click;
             this.btnDelete.Click += BtnDelete_Click;
             this.btnEdit.Click += BtnEdit_Click;
             this.btnClose.Click += BtnClose_Click;
-            grdW.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
+            this.grdW.CellClick += GrdW_CellClick;
+            this.btnSearch.Click += BtnSearch_Click;
+            this.txtSearch.KeyDown += TxtSearch_KeyDown;
         }
+
+        private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+            }
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            grdW.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach (DataGridViewRow row in grdW.Rows)
+                {
+                    if (row.Cells[1].Value.ToString().Equals(txtSearch.Text.ToLower()))
+                    {
+                        row.Selected = true;
+                        grdW.CurrentCell = row.Cells[1];
+                        var word = (Word)row.DataBoundItem;
+                        txtEnglishW.Text = word.English_Word;
+                        cbType.Text = word.Word_type;
+                        rtbMeaning.Text = word.Meaning;
+                        return;
+                    }
+                }
+                throw new Exception();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Your Word Does Not Exist");
+                grdW.ClearSelection();
+            }
+        }
+
+        private void GrdW_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var word = (Word)grdW.SelectedRows[0].DataBoundItem;
+            txtEnglishW.Text = word.English_Word;
+            cbType.Text = word.Word_type;
+            rtbMeaning.Text = word.Meaning;
+        }
+
         private void load_Words()
         {
             var LoadWord = this.Business.GetWords();
             grdW.DataSource = LoadWord;
-        }
-        private void Null()
-        {
-            txtEnglishW.Text = null;
-            cbType.SelectedItem = null;
-            rtbMeaning.Text = null;
-        }
-        private void manage_Enable_Disable(bool IsEnable)
-        {
-            if (IsEnable == true)
-            {
-                this.btnSave.Enabled = true;
-                this.btnCancel.Enabled = true;
-                this.txtEnglishW.Enabled = true;
-                this.cbType.Enabled = true;
-                this.rtbMeaning.Enabled = true;
-            }
-            else
-            {
-                this.btnSave.Enabled = false;
-                this.btnCancel.Enabled = false;
-                this.txtEnglishW.Enabled = false;
-                this.cbType.Enabled = false;
-                this.rtbMeaning.Enabled = false;
-            }
+            grdW.AllowUserToResizeRows = false;
+            grdW.ClearSelection();
+            grdW.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void BtnAdd_Click(object sender, EventArgs e)
-        {
-            manage_Enable_Disable(true);
-            this.btnSave.Click += BtnSave_Click_Add;
-            this.btnCancel.Click += BtnCancel_Click;
-        }
-        private void BtnSave_Click_Add(object sender, EventArgs e)
         {
             var EngW = txtEnglishW.Text;
             var Type = (string)cbType.SelectedItem;
@@ -70,38 +86,20 @@ namespace YourDictionaryLibrary_Dat_Tan
 
             this.Business.AddWord(EngW, Type, Meaning);
             MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            manage_Enable_Disable(false);
-            Null();
             load_Words();
-        }
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            manage_Enable_Disable(false);
         }
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (grdW.SelectedRows.Count == 1)
             {
-                manage_Enable_Disable(true);
                 var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
-                txtEnglishW.Text = Word.English_Word;
-                cbType.SelectedItem = Word.Word_type;
-                rtbMeaning.Text = Word.Meaning;
-                this.btnSave.Click += BtnSave_Click_Edit;
-                this.btnCancel.Click += BtnCancel_Click;
+                var EngW = txtEnglishW.Text;
+                var Type = (string)cbType.SelectedItem;
+                var Meaning = rtbMeaning.Text;
+                this.Business.EditWord(Word.ID, EngW, Type, Meaning);
+                MessageBox.Show("Edit Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                load_Words();
             }
-        }
-        private void BtnSave_Click_Edit(object sender, EventArgs e)
-        {
-            var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
-            var EngW = txtEnglishW.Text;
-            var Type = (string)cbType.SelectedItem;
-            var Meaning = rtbMeaning.Text;
-            this.Business.EditWord(Word.ID, EngW, Type, Meaning);
-            MessageBox.Show("Edit Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            manage_Enable_Disable(false);
-            Null();
-            load_Words();
         }
         private void BtnDelete_Click(object sender, EventArgs e)
         {
@@ -113,10 +111,6 @@ namespace YourDictionaryLibrary_Dat_Tan
                 load_Words();
             }
         }
-        private void BtnReload_Click(object sender, EventArgs e)
-        {
-            load_Words();
-        }
         private void Management_Load(object sender, EventArgs e)
         {
             load_Words();
@@ -124,7 +118,6 @@ namespace YourDictionaryLibrary_Dat_Tan
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            MessageBox.Show("Do you want to close ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
         }
 
         
