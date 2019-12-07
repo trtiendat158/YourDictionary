@@ -36,6 +36,7 @@
             this.btnSpeak = new System.Windows.Forms.Button();
             this.cbWord = new System.Windows.Forms.ComboBox();
             this.rtbMeaningW = new System.Windows.Forms.RichTextBox();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -133,6 +134,21 @@
             this.rtbMeaningW.TabIndex = 44;
             this.rtbMeaningW.Text = "";
             // 
+            // btnOpen
+            // 
+            this.btnOpen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.ForeColor = System.Drawing.Color.Black;
+            this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
+            this.btnOpen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpen.Location = new System.Drawing.Point(13, 89);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(109, 38);
+            this.btnOpen.TabIndex = 45;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOpen.UseVisualStyleBackColor = true;
+            // 
             // Main_Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,6 +156,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(699, 647);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.rtbMeaningW);
             this.Controls.Add(this.cbWord);
             this.Controls.Add(this.btnSpeak);
@@ -166,6 +183,7 @@
         private System.Windows.Forms.Button btnSpeak;
         internal System.Windows.Forms.ComboBox cbWord;
         private System.Windows.Forms.RichTextBox rtbMeaningW;
+        private System.Windows.Forms.Button btnOpen;
     }
 }
 

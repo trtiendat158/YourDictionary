@@ -25,8 +25,15 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnLookUp.Click += BtnLookUp_Click;
             this.btnSpeak.Click += BtnSpeak_Click;
             this.cbWord.KeyDown += CbWord_KeyDown;
+            this.btnOpen.Click += BtnOpen_Click;
             speakEngW = new Speak();
             
+        }
+
+        private void BtnOpen_Click(object sender, EventArgs e)
+        {
+            Save_Data saveF = new Save_Data();
+            saveF.ShowDialog();
         }
 
         private void CbWord_KeyDown(object sender, KeyEventArgs e)
