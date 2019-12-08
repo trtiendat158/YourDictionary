@@ -48,11 +48,10 @@
             this.grdtest.AllowUserToAddRows = false;
             this.grdtest.AllowUserToDeleteRows = false;
             this.grdtest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdtest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdtest.Location = new System.Drawing.Point(0, 24);
             this.grdtest.Name = "grdtest";
             this.grdtest.ReadOnly = true;
-            this.grdtest.Size = new System.Drawing.Size(800, 426);
+            this.grdtest.Size = new System.Drawing.Size(566, 426);
             this.grdtest.TabIndex = 0;
             // 
             // wordBindingSource

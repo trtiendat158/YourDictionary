@@ -25,7 +25,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnLookUp.Click += BtnLookUp_Click;
             this.btnSpeak.Click += BtnSpeak_Click;
             this.cbWord.KeyDown += CbWord_KeyDown;
-            this.btnOpen.Click += BtnOpen_Click;
             this.button1.Click += Button1_Click;
             speakEngW = new Speak();
             
@@ -37,11 +36,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             form.ShowDialog();
         }
 
-        private void BtnOpen_Click(object sender, EventArgs e)
-        {
-            Save_Data saveF = new Save_Data();
-            saveF.ShowDialog();
-        }
         private void CbWord_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

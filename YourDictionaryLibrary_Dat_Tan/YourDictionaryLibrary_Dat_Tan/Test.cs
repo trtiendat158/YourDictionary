@@ -72,7 +72,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             int CountCeil = grdtest.Rows[0].Cells.Count;
             for(int i =0; i <= CountRow - 1; i++)
             {
-                for(int j =0; j <= CountCeil - 1; j++)
+                for(int j =1; j <= CountCeil - 1; j++)
                 {
                     txtExport.Text = txtExport.Text + grdtest.Rows[i].Cells[j].Value.ToString() + ",";
                 }

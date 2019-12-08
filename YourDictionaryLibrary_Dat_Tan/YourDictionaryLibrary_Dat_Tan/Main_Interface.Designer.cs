@@ -36,7 +36,6 @@
             this.btnSpeak = new System.Windows.Forms.Button();
             this.cbWord = new System.Windows.Forms.ComboBox();
             this.rtbMeaningW = new System.Windows.Forms.RichTextBox();
-            this.btnOpen = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -86,7 +85,7 @@
             this.btnLookUp.ForeColor = System.Drawing.Color.Black;
             this.btnLookUp.Image = ((System.Drawing.Image)(resources.GetObject("btnLookUp.Image")));
             this.btnLookUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLookUp.Location = new System.Drawing.Point(167, 120);
+            this.btnLookUp.Location = new System.Drawing.Point(170, 140);
             this.btnLookUp.Name = "btnLookUp";
             this.btnLookUp.Size = new System.Drawing.Size(100, 31);
             this.btnLookUp.TabIndex = 39;
@@ -115,7 +114,7 @@
             this.cbWord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbWord.FormattingEnabled = true;
             this.cbWord.Location = new System.Drawing.Point(10, 120);
-            this.cbWord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWord.Margin = new System.Windows.Forms.Padding(2);
             this.cbWord.Name = "cbWord";
             this.cbWord.Size = new System.Drawing.Size(144, 398);
             this.cbWord.TabIndex = 43;
@@ -125,33 +124,19 @@
             this.rtbMeaningW.Enabled = false;
             this.rtbMeaningW.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMeaningW.Location = new System.Drawing.Point(284, 120);
-            this.rtbMeaningW.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbMeaningW.Margin = new System.Windows.Forms.Padding(2);
             this.rtbMeaningW.Name = "rtbMeaningW";
             this.rtbMeaningW.Size = new System.Drawing.Size(231, 396);
             this.rtbMeaningW.TabIndex = 44;
             this.rtbMeaningW.Text = "";
             // 
-            // btnOpen
-            // 
-            this.btnOpen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpen.ForeColor = System.Drawing.Color.Black;
-            this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
-            this.btnOpen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpen.Location = new System.Drawing.Point(10, 72);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(82, 31);
-            this.btnOpen.TabIndex = 45;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOpen.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(181, 199);
+            this.button1.Location = new System.Drawing.Point(170, 193);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 31);
             this.button1.TabIndex = 47;
-            this.button1.Text = "button1";
+            this.button1.Text = "Export/Import";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Main_Interface
@@ -162,7 +147,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(524, 526);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.rtbMeaningW);
             this.Controls.Add(this.cbWord);
             this.Controls.Add(this.btnSpeak);
@@ -171,7 +155,7 @@
             this.Controls.Add(this.btnManage);
             this.Controls.Add(this.btnInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main_Interface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
@@ -189,7 +173,6 @@
         private System.Windows.Forms.Button btnSpeak;
         internal System.Windows.Forms.ComboBox cbWord;
         private System.Windows.Forms.RichTextBox rtbMeaningW;
-        private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button button1;
     }
 }
