@@ -25,18 +25,17 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnLookUp.Click += BtnLookUp_Click;
             this.btnSpeak.Click += BtnSpeak_Click;
             this.cbWord.KeyDown += CbWord_KeyDown;
-            this.button1.Click += Button1_Click;
+            this.btnExportAndImport.Click += btnExportAndImport_Click;
             speakEngW = new Speak();
             
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnExportAndImport_Click(object sender, EventArgs e)
         {
-            var form = new Test();
+            var form = new ExportandImport();
             form.ShowDialog();
             LoadData();
         }
-
         private void CbWord_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

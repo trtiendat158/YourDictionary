@@ -1,6 +1,6 @@
 ﻿namespace YourDictionaryLibrary_Dat_Tan
 {
-    partial class Test
+    partial class ExportandImport
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnExport = new System.Windows.Forms.ToolStripMenuItem();
             this.btnImport = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
             this.txtExport = new System.Windows.Forms.TextBox();
             this.wordTableAdapter = new YourDictionaryLibrary_Dat_Tan.Words_DataDataSetTableAdapters.WordTableAdapter();
-            this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdtest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wordBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.words_DataDataSet)).BeginInit();
@@ -89,11 +89,18 @@
             this.btnImport.Size = new System.Drawing.Size(55, 20);
             this.btnImport.Text = "Import";
             // 
+            // btnSave
+            // 
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(43, 20);
+            this.btnSave.Text = "Save";
+            // 
             // txtExport
             // 
             this.txtExport.Location = new System.Drawing.Point(564, 24);
             this.txtExport.Multiline = true;
             this.txtExport.Name = "txtExport";
+            this.txtExport.ReadOnly = true;
             this.txtExport.Size = new System.Drawing.Size(236, 426);
             this.txtExport.TabIndex = 2;
             // 
@@ -101,13 +108,7 @@
             // 
             this.wordTableAdapter.ClearBeforeFill = true;
             // 
-            // btnSave
-            // 
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(43, 20);
-            this.btnSave.Text = "Save";
-            // 
-            // Test
+            // ExportandImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,7 +117,8 @@
             this.Controls.Add(this.grdtest);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Test";
+            this.Name = "ExportandImport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test";
             ((System.ComponentModel.ISupportInitialize)(this.grdtest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wordBindingSource)).EndInit();

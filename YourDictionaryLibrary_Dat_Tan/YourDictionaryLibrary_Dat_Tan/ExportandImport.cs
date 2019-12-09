@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    public partial class Test : Form
+    public partial class ExportandImport : Form
     {
         private Words_Management business;
         DataTable dataWord;
-        public Test()
+        public ExportandImport()
         {
             InitializeComponent();
             business = new Words_Management();
@@ -44,21 +44,17 @@ namespace YourDictionaryLibrary_Dat_Tan
             MessageBox.Show("Save Successfully");
             Load1();
         }
+
         private void Load1()
         {
             grdtest.DataSource = business.GetWords();
+            grdtest.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void Test_Load(object sender, EventArgs e)
         {
             Load1();
         }
 
-
-        /// <summary>
-        /// Còn bị lỗi
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BtnImport_Click(object sender, EventArgs e)
         {
             btnSave.Enabled = true;
@@ -84,13 +80,10 @@ namespace YourDictionaryLibrary_Dat_Tan
                         dataWord.Rows.Add(data);
                 }
                 grdtest.DataSource = dataWord;
+                grdtest.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
-        /// <summary>
-        /// còn bị lỗi chưa fix được
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void BtnExport_Click(object sender, EventArgs e)
         {
             btnSave.Enabled = false;

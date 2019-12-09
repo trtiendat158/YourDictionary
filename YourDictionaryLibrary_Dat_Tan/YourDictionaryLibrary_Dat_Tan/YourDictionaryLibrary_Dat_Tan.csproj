@@ -118,11 +118,11 @@
       <DependentUpon>Save_Data.cs</DependentUpon>
     </Compile>
     <Compile Include="Speak.cs" />
-    <Compile Include="Test.cs">
+    <Compile Include="ExportandImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
+    <Compile Include="ExportandImport.Designer.cs">
+      <DependentUpon>ExportandImport.cs</DependentUpon>
     </Compile>
     <Compile Include="Word.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -157,8 +157,8 @@
     <EmbeddedResource Include="Save_Data.resx">
       <DependentUpon>Save_Data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
+    <EmbeddedResource Include="ExportandImport.resx">
+      <DependentUpon>ExportandImport.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

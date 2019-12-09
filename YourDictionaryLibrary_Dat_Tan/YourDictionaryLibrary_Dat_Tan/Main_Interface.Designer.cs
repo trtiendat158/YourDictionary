@@ -36,7 +36,7 @@
             this.btnSpeak = new System.Windows.Forms.Button();
             this.cbWord = new System.Windows.Forms.ComboBox();
             this.rtbMeaningW = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExportAndImport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -130,14 +130,14 @@
             this.rtbMeaningW.TabIndex = 44;
             this.rtbMeaningW.Text = "";
             // 
-            // button1
+            // btnExportAndImport
             // 
-            this.button1.Location = new System.Drawing.Point(170, 193);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 31);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "Export/Import";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExportAndImport.Location = new System.Drawing.Point(170, 193);
+            this.btnExportAndImport.Name = "btnExportAndImport";
+            this.btnExportAndImport.Size = new System.Drawing.Size(100, 31);
+            this.btnExportAndImport.TabIndex = 47;
+            this.btnExportAndImport.Text = "Export/Import";
+            this.btnExportAndImport.UseVisualStyleBackColor = true;
             // 
             // Main_Interface
             // 
@@ -146,7 +146,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(524, 526);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExportAndImport);
             this.Controls.Add(this.rtbMeaningW);
             this.Controls.Add(this.cbWord);
             this.Controls.Add(this.btnSpeak);
@@ -173,7 +173,7 @@
         private System.Windows.Forms.Button btnSpeak;
         internal System.Windows.Forms.ComboBox cbWord;
         private System.Windows.Forms.RichTextBox rtbMeaningW;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExportAndImport;
     }
 }
 
