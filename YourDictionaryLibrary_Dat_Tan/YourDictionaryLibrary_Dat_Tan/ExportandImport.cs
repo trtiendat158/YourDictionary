@@ -89,7 +89,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             btnSave.Enabled = false;
             int CountRow = grdtest.RowCount;
             int CountCeil = grdtest.Rows[0].Cells.Count;
-            txtExport.Text = "English Word,Type,Meaning\r\n";
             for(int i =0; i <= CountRow - 1; i++)
             {
                 for(int j =1; j <= CountCeil - 1; j++)

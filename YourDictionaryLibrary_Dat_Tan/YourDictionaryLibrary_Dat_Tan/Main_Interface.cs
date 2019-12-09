@@ -19,6 +19,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             InitializeComponent();
             this.Business = new Words_Management();
+            speakEngW = new Speak();
             this.Load += Main_Interface_Load;
             this.btnManage.Click += BtnManage_Click;
             this.btnInfo.Click += BtnInfo_Click;
@@ -26,8 +27,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnSpeak.Click += BtnSpeak_Click;
             this.cbWord.KeyDown += CbWord_KeyDown;
             this.btnExportAndImport.Click += btnExportAndImport_Click;
-            speakEngW = new Speak();
-            
+            this.MaximizeBox = false;
         }
 
         private void btnExportAndImport_Click(object sender, EventArgs e)
@@ -51,14 +51,11 @@ namespace YourDictionaryLibrary_Dat_Tan
         private void BtnSpeak_Click(object sender, EventArgs e)
         {
             if (cbWord.SelectedItem == null)
-            {
                 MessageBox.Show("Cant Find Word in your list Data");
-            }
             else
             {
                 var data = cbWord.SelectedItem as Word;
                 this.speakEngW.speak(data.English_Word);
-                
             }
         }
         private void LoadData()

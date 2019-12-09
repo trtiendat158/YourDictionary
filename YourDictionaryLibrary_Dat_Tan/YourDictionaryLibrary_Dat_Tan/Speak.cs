@@ -18,7 +18,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             wb.Height = 0;
             wb.Visible = false;
             wb.ScriptErrorsSuppressed = true;
-            wb.Navigate("https://responsivevoice.org/");
+            wb.Navigate("http://responsivevoice.org/text-to-speech-languages/us-english-text-to-speech/");
         }
 
         /// <summary>

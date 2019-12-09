@@ -52,6 +52,7 @@
             this.grdtest.Location = new System.Drawing.Point(0, 24);
             this.grdtest.Name = "grdtest";
             this.grdtest.ReadOnly = true;
+            this.grdtest.RowHeadersVisible = false;
             this.grdtest.Size = new System.Drawing.Size(566, 426);
             this.grdtest.TabIndex = 0;
             // 
