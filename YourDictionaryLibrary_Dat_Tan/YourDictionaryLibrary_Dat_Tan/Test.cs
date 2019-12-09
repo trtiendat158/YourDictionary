@@ -22,12 +22,35 @@ namespace YourDictionaryLibrary_Dat_Tan
             dataWord = new DataTable();
             this.btnExport.Click += BtnExport_Click;
             this.btnImport.Click += BtnImport_Click;
+            this.btnSave.Click += BtnSave_Click;
             this.Load += Test_Load;
+            btnSave.Enabled = false;
         }
 
-        private void Test_Load(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            int CountRow = grdtest.RowCount;
+            int CountCeil = grdtest.Rows[0].Cells.Count;
+            string[] abc = new string[3];
+            for (int i = 0; i <= CountRow - 1; i++)
+            {
+                for (int j = 0; j <= CountCeil - 1; j++)
+                {
+                        abc[j]=grdtest.Rows[i].Cells[j].Value.ToString();
+                }
+                business.AddWordFromImport(abc);
+            }
+            btnSave.Enabled = false;
+            MessageBox.Show("Save Successfully");
+            Load1();
+        }
+        private void Load1()
         {
             grdtest.DataSource = business.GetWords();
+        }
+        private void Test_Load(object sender, EventArgs e)
+        {
+            Load1();
         }
 
 
@@ -38,12 +61,14 @@ namespace YourDictionaryLibrary_Dat_Tan
         /// <param name="e"></param>
         private void BtnImport_Click(object sender, EventArgs e)
         {
+            btnSave.Enabled = true;
             var dialog = new OpenFileDialog();
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string[] listImport = File.ReadAllLines(dialog.FileName);
                 string[] data = null;
                 int x = 0;
+                
                 foreach (string text_line in listImport)
                 {
                     data = text_line.Split(',');
@@ -68,13 +93,18 @@ namespace YourDictionaryLibrary_Dat_Tan
         /// <param name="e"></param>
         private void BtnExport_Click(object sender, EventArgs e)
         {
+            btnSave.Enabled = false;
             int CountRow = grdtest.RowCount;
             int CountCeil = grdtest.Rows[0].Cells.Count;
+            txtExport.Text = "English Word,Type,Meaning\r\n";
             for(int i =0; i <= CountRow - 1; i++)
             {
                 for(int j =1; j <= CountCeil - 1; j++)
                 {
-                    txtExport.Text = txtExport.Text + grdtest.Rows[i].Cells[j].Value.ToString() + ",";
+                    if (j == CountCeil - 1)
+                        txtExport.Text = txtExport.Text + grdtest.Rows[i].Cells[j].Value.ToString();
+                    else
+                        txtExport.Text = txtExport.Text + grdtest.Rows[i].Cells[j].Value.ToString() + ",";
                 }
                 txtExport.Text = txtExport.Text + "\r\n";
             }

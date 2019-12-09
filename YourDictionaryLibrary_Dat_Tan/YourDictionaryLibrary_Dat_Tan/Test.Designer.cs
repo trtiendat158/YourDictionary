@@ -37,6 +37,7 @@
             this.btnImport = new System.Windows.Forms.ToolStripMenuItem();
             this.txtExport = new System.Windows.Forms.TextBox();
             this.wordTableAdapter = new YourDictionaryLibrary_Dat_Tan.Words_DataDataSetTableAdapters.WordTableAdapter();
+            this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdtest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wordBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.words_DataDataSet)).BeginInit();
@@ -68,7 +69,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnExport,
-            this.btnImport});
+            this.btnImport,
+            this.btnSave});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -98,6 +100,12 @@
             // wordTableAdapter
             // 
             this.wordTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(43, 20);
+            this.btnSave.Text = "Save";
             // 
             // Test
             // 
@@ -130,5 +138,6 @@
         private Words_DataDataSet words_DataDataSet;
         private System.Windows.Forms.BindingSource wordBindingSource;
         private Words_DataDataSetTableAdapters.WordTableAdapter wordTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem btnSave;
     }
 }

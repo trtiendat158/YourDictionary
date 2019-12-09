@@ -34,6 +34,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             var form = new Test();
             form.ShowDialog();
+            LoadData();
         }
 
         private void CbWord_KeyDown(object sender, KeyEventArgs e)

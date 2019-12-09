@@ -52,5 +52,17 @@ namespace YourDictionaryLibrary_Dat_Tan
             Data.Words.Remove(Data.Words.Find(id));
             Data.SaveChanges();
         }
+
+        public void AddWordFromImport(string[] abc)
+        {
+            var word = new Word();
+            word.English_Word = abc[0];
+            word.Word_type = abc[1];
+            word.Meaning = abc[2];
+
+            var Data = new Words_DataEntities();
+            Data.Words.Add(word);
+            Data.SaveChanges();
+        }
     }
 }
