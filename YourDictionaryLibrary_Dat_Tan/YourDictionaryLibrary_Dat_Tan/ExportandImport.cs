@@ -41,7 +41,7 @@ namespace YourDictionaryLibrary_Dat_Tan
                 business.AddWordFromImport(abc);
             }
             btnSave.Enabled = false;
-            MessageBox.Show("Save Successfully");
+            MessageBox.Show("Save Successfully","Nofication",MessageBoxButtons.OK,MessageBoxIcon.Information);
             Load1();
         }
 
