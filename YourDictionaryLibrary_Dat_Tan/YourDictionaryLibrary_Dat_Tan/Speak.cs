@@ -20,7 +20,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             wb.ScriptErrorsSuppressed = true;
             wb.Navigate("http://responsivevoice.org/text-to-speech-languages/us-english-text-to-speech/");
         }
-
         /// <summary>
         /// Sau khi có dữ liệu cần nói, đưa data để settext và chọn play để nói
         /// </summary>
@@ -30,7 +29,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             SetTextToSpeak(data);
             SpeakText();
         }
-
         /// <summary>
         /// Soạn từ lên mạng để nói
         /// </summary>
@@ -40,7 +38,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             HtmlElement element = wb.Document.GetElementById("text");
             element.SetAttribute("value", data);
         }
-
         /// <summary>
         /// Chọn play để nói
         /// </summary>

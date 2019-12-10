@@ -8,18 +8,17 @@ namespace YourDictionaryLibrary_Dat_Tan
 {
     class Words_Management
     {
-        private readonly Words_DataEntities db;
+        private Words_DataEntities db;
         public Word[] GetWords()
         {
-            var Data = new Words_DataEntities();
-            var Words = Data.Words.ToArray();
+            db = new Words_DataEntities();
+            var Words = db.Words.ToArray();
             return Words;
         }
-
         public Word GetWord(int id)
         {
-            var Data = new Words_DataEntities();
-            var Word = Data.Words.Find(id);
+            db = new Words_DataEntities();
+            var Word = db.Words.Find(id);
             return Word;
         }
         public void AddWord(string EngW, string WordType, string Meaning)
@@ -29,40 +28,37 @@ namespace YourDictionaryLibrary_Dat_Tan
             NewWord.Word_type = WordType;
             NewWord.Meaning = Meaning.ToLower();
 
-            var Data = new Words_DataEntities();
-            Data.Words.Add(NewWord);
-            Data.SaveChanges();
+            db = new Words_DataEntities();
+            db.Words.Add(NewWord);
+            db.SaveChanges();
         }
-
         public void EditWord(int id, string EngW, string WordType, string Meaning)
         {
-            var Data = new Words_DataEntities();
-            var Word = Data.Words.Find(id);
+            db = new Words_DataEntities();
+            var Word = db.Words.Find(id);
             Word.English_Word = EngW.ToLower();
             Word.Word_type = WordType;
             Word.Meaning = Meaning.ToLower();
 
-            Data.Entry(Word).State = System.Data.Entity.EntityState.Modified;
-            Data.SaveChanges();
+            db.Entry(Word).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
         }
-
         public void DeleteWord(int id)
         {
-            var Data = new Words_DataEntities();
-            Data.Words.Remove(Data.Words.Find(id));
-            Data.SaveChanges();
+            db = new Words_DataEntities();
+            db.Words.Remove(db.Words.Find(id));
+            db.SaveChanges();
         }
-
-        public void AddWordFromImport(string[] abc)
+        public void AddWordFromImport(string[] ArrayDataWords)
         {
             var word = new Word();
-            word.English_Word = abc[0];
-            word.Word_type = abc[1];
-            word.Meaning = abc[2];
+            word.English_Word = ArrayDataWords[0];
+            word.Word_type = ArrayDataWords[1];
+            word.Meaning = ArrayDataWords[2];
 
-            var Data = new Words_DataEntities();
-            Data.Words.Add(word);
-            Data.SaveChanges();
+            db = new Words_DataEntities();
+            db.Words.Add(word);
+            db.SaveChanges();
         }
     }
 }

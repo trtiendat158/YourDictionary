@@ -17,7 +17,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             InitializeComponent();
             this.btnOk.Click += BtnOk_Click;
         }
-
         private void BtnOk_Click(object sender, EventArgs e)
         {
             this.Close();

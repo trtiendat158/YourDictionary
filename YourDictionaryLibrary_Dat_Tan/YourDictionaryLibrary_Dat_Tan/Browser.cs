@@ -12,12 +12,13 @@ namespace YourDictionaryLibrary_Dat_Tan
 {
     public partial class Browser : Form
     {
-        WebBrowser wb = new WebBrowser();
+        WebBrowser wb;
         public Browser()
         {
             InitializeComponent();
-            this.btnGG.Click += BtnGG_Click;
-            this.btnVdict.Click += BtnVdict_Click;
+            wb = new WebBrowser();
+            this.btnCambrigde.Click += BtnGG_Click;
+            this.btnVDict.Click += BtnVdict_Click;
             this.btnDict.Click += BtnDict_Click;
             this.btnGGS.Click += BtnGGS_Click;
             wb.ScriptErrorsSuppressed = true;
@@ -25,26 +26,21 @@ namespace YourDictionaryLibrary_Dat_Tan
             wb.Width = 1064;
             pnlBrowser.Controls.Add(wb);
         }
-
         private void BtnGGS_Click(object sender, EventArgs e)
         {
             wb.Navigate("https://www.google.com");
         }
-
         private void BtnDict_Click(object sender, EventArgs e)
         {
             wb.Navigate("https://www.dict.com/anh-viet");
         }
-
         private void BtnVdict_Click(object sender, EventArgs e)
         {
             wb.Navigate("https://vdict.com");
         }
-
         private void BtnGG_Click(object sender, EventArgs e)
         {
             wb.Navigate("https://dictionary.cambridge.org/vi/dictionary/english-vietnamese/");
         }
-
     }
 }

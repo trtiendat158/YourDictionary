@@ -29,7 +29,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnExportAndImport.Click += btnExportAndImport_Click;
             this.MaximizeBox = false;
         }
-
         private void btnExportAndImport_Click(object sender, EventArgs e)
         {
             var form = new ExportandImport();

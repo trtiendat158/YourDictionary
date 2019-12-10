@@ -26,7 +26,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnSearch.Click += BtnSearch_Click;
             this.txtSearch.KeyDown += TxtSearch_KeyDown;
         }
-
         private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -34,7 +33,6 @@ namespace YourDictionaryLibrary_Dat_Tan
                 btnSearch.PerformClick();
             }
         }
-
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             grdW.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -61,7 +59,6 @@ namespace YourDictionaryLibrary_Dat_Tan
                 grdW.ClearSelection();
             }
         }
-
         private void GrdW_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var word = (Word)grdW.SelectedRows[0].DataBoundItem;
@@ -69,7 +66,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             cbType.Text = word.Word_type;
             rtbMeaning.Text = word.Meaning;
         }
-
         private void load_Words()
         {
             var LoadWord = this.Business.GetWords();
@@ -119,7 +115,5 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             this.Close();
         }
-
-        
     }
 }

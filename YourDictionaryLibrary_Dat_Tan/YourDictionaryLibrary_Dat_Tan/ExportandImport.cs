@@ -23,41 +23,53 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnExport.Click += BtnExport_Click;
             this.btnImport.Click += BtnImport_Click;
             this.btnSave.Click += BtnSave_Click;
-            this.Load += Test_Load;
+            this.btnReload.Click += BtnReload_Click;
+            this.Load += ExportandImport_Load;
             btnSave.Enabled = false;
+            this.grdForEX_IM.ReadOnly = true;
+            this.grdForEX_IM.AllowUserToResizeRows = false;
+            this.grdForEX_IM.AllowUserToResizeColumns = false;
         }
-
+        private void BtnReload_Click(object sender, EventArgs e)
+        {
+            dataWord = new DataTable();
+            LoadAllIndexIn_DB();
+            btnExport.Enabled = true;
+            btnSave.Enabled = false;
+            MessageBox.Show("Reload Successfully");
+        }
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            int CountRow = grdtest.RowCount;
-            int CountCeil = grdtest.Rows[0].Cells.Count;
+            int CountRow = grdForEX_IM.RowCount;
+            int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
             string[] abc = new string[3];
             for (int i = 0; i <= CountRow - 1; i++)
             {
                 for (int j = 0; j <= CountCeil - 1; j++)
                 {
-                        abc[j]=grdtest.Rows[i].Cells[j].Value.ToString();
+                        abc[j]=grdForEX_IM.Rows[i].Cells[j].Value.ToString();
                 }
                 business.AddWordFromImport(abc);
             }
             btnSave.Enabled = false;
             MessageBox.Show("Save Successfully","Nofication",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            Load1();
+            LoadAllIndexIn_DB();
+            btnExport.Enabled = true;
+            btnImport.Enabled = false;
         }
-
-        private void Load1()
+        private void LoadAllIndexIn_DB()
         {
-            grdtest.DataSource = business.GetWords();
-            grdtest.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grdForEX_IM.DataSource = business.GetWords();
+            grdForEX_IM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-        private void Test_Load(object sender, EventArgs e)
+        private void ExportandImport_Load(object sender, EventArgs e)
         {
-            Load1();
+            LoadAllIndexIn_DB();
         }
-
         private void BtnImport_Click(object sender, EventArgs e)
         {
             btnSave.Enabled = true;
+            btnExport.Enabled = false;
             var dialog = new OpenFileDialog();
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -79,24 +91,24 @@ namespace YourDictionaryLibrary_Dat_Tan
                     else
                         dataWord.Rows.Add(data);
                 }
-                grdtest.DataSource = dataWord;
-                grdtest.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                grdForEX_IM.DataSource = dataWord;
+                grdForEX_IM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
-
         private void BtnExport_Click(object sender, EventArgs e)
         {
             btnSave.Enabled = false;
-            int CountRow = grdtest.RowCount;
-            int CountCeil = grdtest.Rows[0].Cells.Count;
+            int CountRow = grdForEX_IM.RowCount;
+            int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
+            txtExport.Text = "English Word,Type Word, Meaning\r\n";
             for(int i =0; i <= CountRow - 1; i++)
             {
                 for(int j =1; j <= CountCeil - 1; j++)
                 {
                     if (j == CountCeil - 1)
-                        txtExport.Text = txtExport.Text + grdtest.Rows[i].Cells[j].Value.ToString();
+                        txtExport.Text = txtExport.Text + grdForEX_IM.Rows[i].Cells[j].Value.ToString();
                     else
-                        txtExport.Text = txtExport.Text + grdtest.Rows[i].Cells[j].Value.ToString() + ",";
+                        txtExport.Text = txtExport.Text + grdForEX_IM.Rows[i].Cells[j].Value.ToString() + ",";
                 }
                 txtExport.Text = txtExport.Text + "\r\n";
             }
