@@ -99,12 +99,16 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            
             if (grdW.SelectedRows.Count == 1)
             {
-                var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
-                this.Business.DeleteWord(Word.ID);
-                MessageBox.Show("Delete Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                load_Words();
+                if(MessageBox.Show("Are You Sure Want To Delete this row", "Nofication", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
+                    this.Business.DeleteWord(Word.ID);
+                    MessageBox.Show("Delete Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    load_Words();
+                }
             }
         }
         private void Management_Load(object sender, EventArgs e)
