@@ -10,10 +10,10 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="English_Word" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Word_Type" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Phonetic" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Meaning" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="English_Word" Type="varchar" MaxLength="20" />
+          <Property Name="Word_Type" Type="varchar" MaxLength="20" />
+          <Property Name="Phonetic" Type="nvarchar" MaxLength="20" />
+          <Property Name="Meaning" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="Words_DataModelStoreContainer">
           <EntitySet Name="Word" EntityType="Self.Word" Schema="dbo" store:Type="Tables" />
@@ -30,10 +30,10 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="English_Word" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Word_Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Phonetic" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Meaning" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="English_Word" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Word_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Phonetic" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Meaning" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
