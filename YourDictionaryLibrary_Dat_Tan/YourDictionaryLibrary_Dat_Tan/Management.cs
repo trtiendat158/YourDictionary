@@ -107,14 +107,19 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             if (grdW.SelectedRows.Count == 1)
             {
-                var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
-                var EngW = txtEnglishW.Text;
-                var Type = (string)cbType.SelectedItem;
-                var Meaning = rtbMeaning.Text;
-                var phonetic = txtPhonetic.Text;
-                this.Business.EditWord(Word.ID, EngW, Type, phonetic, Meaning);
-                MessageBox.Show("Edit Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                load_Words();
+                if (CheckNull() == true)
+                {
+                    var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
+                    var EngW = txtEnglishW.Text;
+                    var Type = (string)cbType.SelectedItem;
+                    var Meaning = rtbMeaning.Text;
+                    var phonetic = txtPhonetic.Text;
+                    this.Business.EditWord(Word.ID, EngW, Type, phonetic, Meaning);
+                    MessageBox.Show("Edit Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    load_Words();
+                }
+                else
+                    MessageBox.Show("Do Not Set Data Null", "Nofication",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void BtnDelete_Click(object sender, EventArgs e)

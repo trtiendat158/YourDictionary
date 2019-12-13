@@ -42,7 +42,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             int CountRow = grdForEX_IM.RowCount;
             int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
-            string[] abc = new string[3];
+            string[] abc = new string[4];
             for (int i = 0; i <= CountRow - 1; i++)
             {
                 for (int j = 0; j <= CountCeil - 1; j++)
