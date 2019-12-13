@@ -26,6 +26,16 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnSearch.Click += BtnSearch_Click;
             this.txtSearch.KeyDown += TxtSearch_KeyDown;
         }
+        private bool CheckNull()
+        {
+            if (txtEnglishW.Text == "" || cbType.Text == "" ||
+            rtbMeaning.Text == "" ||
+            txtPhonetic.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
         private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -79,14 +89,19 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            var EngW = txtEnglishW.Text;
-            var Type = (string)cbType.SelectedItem;
-            var Meaning = rtbMeaning.Text;
-            var phonetic = txtPhonetic.Text;
+            if (CheckNull() == true)
+            {
+                var EngW = txtEnglishW.Text;
+                var Type = (string)cbType.SelectedItem;
+                var Meaning = rtbMeaning.Text;
+                var phonetic = txtPhonetic.Text;
 
-            this.Business.AddWord(EngW, Type, phonetic, Meaning);
-            MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            load_Words();
+                this.Business.AddWord(EngW, Type, phonetic, Meaning);
+                MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                load_Words();
+            }
+            else
+                MessageBox.Show("Data to Add not null");
         }
         private void BtnEdit_Click(object sender, EventArgs e)
         {
