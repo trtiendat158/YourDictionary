@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    public partial class Browser : Form
+    public partial class Browser_Web_Look_NewWord : Form
     {
         WebBrowser wb;
-        public Browser()
+        public Browser_Web_Look_NewWord()
         {
             InitializeComponent();
             wb = new WebBrowser();

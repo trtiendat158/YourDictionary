@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    public partial class Management : Form
+    public partial class Management_ListWord : Form
     {
         private Words_Management Business;
-        public Management()
+        public Management_ListWord()
         {
             InitializeComponent();
             this.Business = new Words_Management();

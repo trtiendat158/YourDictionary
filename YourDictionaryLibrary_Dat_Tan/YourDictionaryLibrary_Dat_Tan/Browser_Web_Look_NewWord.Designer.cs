@@ -1,6 +1,6 @@
 ﻿namespace YourDictionaryLibrary_Dat_Tan
 {
-    partial class Browser
+    partial class Browser_Web_Look_NewWord
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Browser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Browser_Web_Look_NewWord));
             this.btnCambrigde = new System.Windows.Forms.Button();
             this.btnVDict = new System.Windows.Forms.Button();
             this.pnlBrowser = new System.Windows.Forms.Panel();

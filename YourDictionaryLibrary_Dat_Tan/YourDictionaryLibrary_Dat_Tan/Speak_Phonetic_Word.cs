@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    class Speak
+    class Speak_Phonetic_Word
     {
         private WebBrowser wb;
-        public Speak()
+        public Speak_Phonetic_Word()
         {
             //Webbrowser hoạt động ngầm để thực hiện chức năng nói
             wb = new WebBrowser();

@@ -13,12 +13,12 @@ namespace YourDictionaryLibrary_Dat_Tan
     public partial class Main_Interface : Form
     {
         private Words_Management Business;
-        Speak speakEngW;
+        Speak_Phonetic_Word speakEngW;
         public Main_Interface()
         {
             InitializeComponent();
             this.Business = new Words_Management();
-            speakEngW = new Speak();
+            speakEngW = new Speak_Phonetic_Word();
             this.Load += Main_Interface_Load;
             this.btnManage.Click += BtnManage_Click;
             this.btnInfo.Click += BtnInfo_Click;
@@ -30,7 +30,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         private void btnExportAndImport_Click(object sender, EventArgs e)
         {
-            var form = new ExportandImport();
+            var form = new Export_and_Import_Data();
             form.ShowDialog();
             LoadData();
         }
@@ -72,17 +72,25 @@ namespace YourDictionaryLibrary_Dat_Tan
             {
                 if(MessageBox.Show("This word don't exist, do you want to look up this in another web ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    var Browser = new Browser();
+                    var Browser = new Browser_Web_Look_NewWord();
                     Browser.ShowDialog();
                 }
             }
             else
             {
                 var data = cbWord.SelectedItem as Word;
-                rtbMeaningW.Text = "Type:" + "  " + data.Word_Type + "\r\n" +
+                rtbMeaningW.Text = "Type:" + "  " + data.Word_Type + "\r\n"+ 
+                    "Phonetic: "+data.Phonetic+"\r\n"+
                     "Meaning:\r\n" + " \t" + data.Meaning;
-             // change color type, meaning
+                rtbMeaningW.Find(data.Word_Type);
+                rtbMeaningW.SelectionColor = Color.Black;
+                rtbMeaningW.Find(data.Phonetic);
+                rtbMeaningW.SelectionColor = Color.Black;
+                rtbMeaningW.Find(data.Meaning);
+                rtbMeaningW.SelectionColor = Color.Black;
                 rtbMeaningW.Find("Type:");
+                rtbMeaningW.SelectionColor = Color.Red;
+                rtbMeaningW.Find("Phonetic:");
                 rtbMeaningW.SelectionColor = Color.Red;
                 rtbMeaningW.Find("Meaning");
                 rtbMeaningW.SelectionColor = Color.Blue;
@@ -90,12 +98,12 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         private void BtnInfo_Click(object sender, EventArgs e)
         {
-            Infomation info = new Infomation();
+            Infomation_TeamBuilding info = new Infomation_TeamBuilding();
             info.ShowDialog();
         }
         private void BtnManage_Click(object sender, EventArgs e)
         {
-            Management manageW = new Management();
+            Management_ListWord manageW = new Management_ListWord();
             manageW.ShowDialog();
             LoadData();
         }

@@ -1,6 +1,6 @@
 ﻿namespace YourDictionaryLibrary_Dat_Tan
 {
-    partial class Management
+    partial class Management_ListWord
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Management));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Management_ListWord));
             this.txtEnglishW = new System.Windows.Forms.TextBox();
             this.panelQuanLy = new System.Windows.Forms.Panel();
             this.txtPhonetic = new System.Windows.Forms.TextBox();

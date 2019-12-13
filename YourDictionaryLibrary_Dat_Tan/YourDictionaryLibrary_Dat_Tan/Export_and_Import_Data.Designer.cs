@@ -1,6 +1,6 @@
 ﻿namespace YourDictionaryLibrary_Dat_Tan
 {
-    partial class ExportandImport
+    partial class Export_and_Import_Data
     {
         /// <summary>
         /// Required designer variable.

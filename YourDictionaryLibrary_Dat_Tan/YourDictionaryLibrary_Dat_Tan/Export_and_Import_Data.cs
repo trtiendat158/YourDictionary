@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    public partial class ExportandImport : Form
+    public partial class Export_and_Import_Data : Form
     {
         private Words_Management business;
         DataTable dataWord;
-        public ExportandImport()
+        public Export_and_Import_Data()
         {
             InitializeComponent();
             business = new Words_Management();
