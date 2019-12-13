@@ -100,7 +100,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             btnSave.Enabled = false;
             int CountRow = grdForEX_IM.RowCount;
             int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
-            txtExport.Text = "English Word,Type Word, Meaning\r\n";
+            txtExport.Text = "English Word,Type Word,Phonetic,Meaning\r\n";
             for(int i =0; i <= CountRow - 1; i++)
             {
                 for(int j =1; j <= CountCeil - 1; j++)

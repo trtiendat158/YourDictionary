@@ -16,7 +16,8 @@ namespace YourDictionaryLibrary_Dat_Tan
     {
         public int ID { get; set; }
         public string English_Word { get; set; }
-        public string Word_type { get; set; }
+        public string Word_Type { get; set; }
+        public string Phonetic { get; set; }
         public string Meaning { get; set; }
     }
 }

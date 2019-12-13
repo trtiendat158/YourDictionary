@@ -8,36 +8,38 @@ namespace YourDictionaryLibrary_Dat_Tan
 {
     class Words_Management
     {
-        private Words_DataEntities db;
+        private Words_DataEntities1 db;
         public Word[] GetWords()
         {
-            db = new Words_DataEntities();
+            db = new Words_DataEntities1();
             var Words = db.Words.ToArray();
             return Words;
         }
         public Word GetWord(int id)
         {
-            db = new Words_DataEntities();
+            db = new Words_DataEntities1();
             var Word = db.Words.Find(id);
             return Word;
         }
-        public void AddWord(string EngW, string WordType, string Meaning)
+        public void AddWord(string EngW, string WordType,string phonetic, string Meaning)
         {
             var NewWord = new Word();
             NewWord.English_Word = EngW.ToLower();
-            NewWord.Word_type = WordType;
+            NewWord.Word_Type = WordType;
+            NewWord.Phonetic = phonetic;
             NewWord.Meaning = Meaning.ToLower();
 
-            db = new Words_DataEntities();
+            db = new Words_DataEntities1();
             db.Words.Add(NewWord);
             db.SaveChanges();
         }
-        public void EditWord(int id, string EngW, string WordType, string Meaning)
+        public void EditWord(int id, string EngW, string WordType,string phonetic, string Meaning)
         {
-            db = new Words_DataEntities();
+            db = new Words_DataEntities1();
             var Word = db.Words.Find(id);
             Word.English_Word = EngW.ToLower();
-            Word.Word_type = WordType;
+            Word.Word_Type = WordType;
+            Word.Phonetic = phonetic;
             Word.Meaning = Meaning.ToLower();
 
             db.Entry(Word).State = System.Data.Entity.EntityState.Modified;
@@ -45,7 +47,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         public void DeleteWord(int id)
         {
-            db = new Words_DataEntities();
+            db = new Words_DataEntities1();
             db.Words.Remove(db.Words.Find(id));
             db.SaveChanges();
         }
@@ -53,10 +55,11 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             var word = new Word();
             word.English_Word = ArrayDataWords[0];
-            word.Word_type = ArrayDataWords[1];
-            word.Meaning = ArrayDataWords[2];
-
-            db = new Words_DataEntities();
+            word.Word_Type = ArrayDataWords[1];
+            word.Phonetic = ArrayDataWords[2];
+            word.Meaning = ArrayDataWords[3];
+            
+            db = new Words_DataEntities1();
             db.Words.Add(word);
             db.SaveChanges();
         }

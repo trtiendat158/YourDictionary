@@ -13,7 +13,6 @@ namespace YourDictionaryLibrary_Dat_Tan
     public partial class Main_Interface : Form
     {
         private Words_Management Business;
-        WebBrowser wb;
         Speak speakEngW;
         public Main_Interface()
         {
@@ -50,7 +49,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         private void BtnSpeak_Click(object sender, EventArgs e)
         {
             if (cbWord.SelectedItem == null)
-                MessageBox.Show("Cant Find Word in your list Data");
+                MessageBox.Show("Cant Find Word in your list Data","Thông báo");
             else
             {
                 var data = cbWord.SelectedItem as Word;
@@ -80,7 +79,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             else
             {
                 var data = cbWord.SelectedItem as Word;
-                rtbMeaningW.Text = "Type:" + "  " + data.Word_type + "\r\n" +
+                rtbMeaningW.Text = "Type:" + "  " + data.Word_Type + "\r\n" +
                     "Meaning:\r\n" + " \t" + data.Meaning;
              // change color type, meaning
                 rtbMeaningW.Find("Type:");

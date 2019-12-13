@@ -10,8 +10,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="English_Word" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Word_type" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="English_Word" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Word_Type" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Phonetic" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Meaning" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityContainer Name="Words_DataModelStoreContainer">
@@ -21,7 +22,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Words_DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="Words_DataEntities" annotation:LazyLoadingEnabled="true" >
+        <EntityContainer Name="Words_DataEntities1" annotation:LazyLoadingEnabled="true" >
           <EntitySet Name="Words" EntityType="Words_DataModel.Word" />
         </EntityContainer>
         <EntityType Name="Word">
@@ -29,8 +30,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="English_Word" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Word_type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="English_Word" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Word_Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Phonetic" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Meaning" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
@@ -38,12 +40,13 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Words_DataModelStoreContainer" CdmEntityContainer="Words_DataEntities" >
+        <EntityContainerMapping StorageEntityContainer="Words_DataModelStoreContainer" CdmEntityContainer="Words_DataEntities1" >
           <EntitySetMapping Name="Words">
             <EntityTypeMapping TypeName="Words_DataModel.Word">
               <MappingFragment StoreEntitySet="Word">
                 <ScalarProperty Name="Meaning" ColumnName="Meaning" />
-                <ScalarProperty Name="Word_type" ColumnName="Word_type" />
+                <ScalarProperty Name="Phonetic" ColumnName="Phonetic" />
+                <ScalarProperty Name="Word_Type" ColumnName="Word_Type" />
                 <ScalarProperty Name="English_Word" ColumnName="English_Word" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
