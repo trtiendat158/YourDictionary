@@ -14,7 +14,7 @@ namespace YourDictionaryLibrary_Dat_Tan
     
     public partial class Word
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string English_Word { get; set; }
         public string Word_Type { get; set; }
         public string Phonetic { get; set; }

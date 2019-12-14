@@ -13,10 +13,10 @@ namespace YourDictionaryLibrary_Dat_Tan
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Words_DataEntities1 : DbContext
+    public partial class mydbWordEntities : DbContext
     {
-        public Words_DataEntities1()
-            : base("name=Words_DataEntities1")
+        public mydbWordEntities()
+            : base("name=mydbWordEntities")
         {
         }
     

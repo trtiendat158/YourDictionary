@@ -8,16 +8,16 @@ namespace YourDictionaryLibrary_Dat_Tan
 {
     class Words_Management
     {
-        private Words_DataEntities1 db;
+        private mydbWordEntities db;
         public Word[] GetWords()
         {
-            db = new Words_DataEntities1();
+            db = new mydbWordEntities();
             var Words = db.Words.ToArray();
             return Words;
         }
         public Word GetWord(int id)
         {
-            db = new Words_DataEntities1();
+            db = new mydbWordEntities();
             var Word = db.Words.Find(id);
             return Word;
         }
@@ -29,13 +29,13 @@ namespace YourDictionaryLibrary_Dat_Tan
             NewWord.Phonetic = phonetic;
             NewWord.Meaning = Meaning.ToLower();
 
-            db = new Words_DataEntities1();
+            db = new mydbWordEntities();
             db.Words.Add(NewWord);
             db.SaveChanges();
         }
         public void EditWord(int id, string EngW, string WordType,string phonetic, string Meaning)
         {
-            db = new Words_DataEntities1();
+            db = new mydbWordEntities();
             var Word = db.Words.Find(id);
             Word.English_Word = EngW.ToLower();
             Word.Word_Type = WordType;
@@ -47,7 +47,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         public void DeleteWord(int id)
         {
-            db = new Words_DataEntities1();
+            db = new mydbWordEntities();
             db.Words.Remove(db.Words.Find(id));
             db.SaveChanges();
         }
@@ -59,7 +59,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             word.Phonetic = ArrayDataWords[2];
             word.Meaning = ArrayDataWords[3];
             
-            db = new Words_DataEntities1();
+            db = new mydbWordEntities();
             db.Words.Add(word);
             db.SaveChanges();
         }
