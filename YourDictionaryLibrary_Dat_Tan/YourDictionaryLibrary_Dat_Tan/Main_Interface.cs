@@ -20,16 +20,14 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.Business = new Words_Management();
             speakEngW = new Speak_Phonetic_Word();
             this.Load += Main_Interface_Load;
-            this.btnManage_ListWord.Click += BtnManage_Click;
-            this.btnInfo_TeamBuilding.Click += BtnInfo_Click;
-            this.btnLookUp_Word_inWeb.Click += BtnLookUp_Click;
-            this.btnSpeak_Word.Click += BtnSpeak_Click;
-            this.cbWord.KeyDown += CbWord_KeyDown;
-            this.btnExport_and_Import_Data_Words.Click += btnExportAndImport_Click;
+            this.btnManage_ListWord.Click += btnManage_ListWord_Click;
+            this.btnInfo_TeamBuilding.Click += btnInfo_TeamBuilding_Click;
+            this.btnLookUp_Word_inWeb.Click += btnLookup_Word_inWeb_Click;
+            this.btnSpeak_Word.Click += btnSpeak_Word_Click;
+            this.btnExport_and_Import_Data_Words.Click += btnExport_and_Import_Data_Words_Click;
             this.MaximizeBox = false;
             this.cbWord.Click += CbWord_Click;
         }
-
         private void CbWord_Click(object sender, EventArgs e)
         {
             var data = cbWord.SelectedItem as Word;
@@ -49,25 +47,18 @@ namespace YourDictionaryLibrary_Dat_Tan
             rtbMeaningW.Find("Meaning");
             rtbMeaningW.SelectionColor = Color.Blue;
         }
-        private void btnExportAndImport_Click(object sender, EventArgs e)
+        private void btnExport_and_Import_Data_Words_Click(object sender, EventArgs e)
         {
             var form = new Export_and_Import_Data_Words();
             form.ShowDialog();
             LoadData();
-        }
-        private void CbWord_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnLookUp_Word_inWeb.PerformClick();
-            }
         }
         /// <summary>
         /// Bắt sự kiện btnSpeak.click lấy dữ liêu từ combobox vào speakEng,speak
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BtnSpeak_Click(object sender, EventArgs e)
+        private void btnSpeak_Word_Click(object sender, EventArgs e)
         {
             try
             {
@@ -94,7 +85,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             LoadData();
         }
-        private void BtnLookUp_Click(object sender, EventArgs e)
+        private void btnLookup_Word_inWeb_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("This Function Help You Look Up in another Web, Click \"OK\" To continue", "Nofication",MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
@@ -102,12 +93,12 @@ namespace YourDictionaryLibrary_Dat_Tan
                 Browser.ShowDialog();
             }
         }
-        private void BtnInfo_Click(object sender, EventArgs e)
+        private void btnInfo_TeamBuilding_Click(object sender, EventArgs e)
         {
             Infomation_TeamBuilding info = new Infomation_TeamBuilding();
             info.ShowDialog();
         }
-        private void BtnManage_Click(object sender, EventArgs e)
+        private void btnManage_ListWord_Click(object sender, EventArgs e)
         {
             Management_ListWord manageW = new Management_ListWord();
             manageW.ShowDialog();

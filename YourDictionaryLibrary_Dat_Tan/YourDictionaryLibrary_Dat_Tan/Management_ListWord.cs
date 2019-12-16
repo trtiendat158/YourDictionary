@@ -18,19 +18,19 @@ namespace YourDictionaryLibrary_Dat_Tan
             InitializeComponent();
             this.Business = new Words_Management();
             this.Load += Management_Load;
-            this.btnAdd_Word.Click += BtnAdd_Click;
-            this.btnDelete_Words.Click += BtnDelete_Click;
-            this.btnEdit_Word.Click += BtnEdit_Click;
+            this.btnAdd_Word.Click += btnAdd_Word_Click;
+            this.btnDelete_Words.Click += btnDelete_Words_Click;
+            this.btnEdit_Word.Click += btnEdit_Word_Click;
             this.btnClose.Click += BtnClose_Click;
             this.grdW.CellClick += GrdW_CellClick;
-            this.btnSearch_Word.Click += BtnSearch_Click;
+            this.btnSearch_Word.Click += btnSearch_Word_Click;
             this.cbSearch.KeyDown += CbSearch_KeyDown;
         }
         private void CbSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                BtnSearch_Click(sender, e);
+                btnSearch_Word_Click(sender, e);
             }
         }
         private bool CheckNull()
@@ -43,7 +43,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             }
             return true;
         }
-        private void BtnSearch_Click(object sender, EventArgs e)
+        private void btnSearch_Word_Click(object sender, EventArgs e)
         {
             grdW.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
@@ -89,7 +89,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.cbSearch.DisplayMember = "English_Word";
             this.cbSearch.ValueMember = "ID";
         }
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Word_Click(object sender, EventArgs e)
         {
             if (CheckNull() == true)
             {
@@ -124,7 +124,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             else
                 MessageBox.Show("Data to Add not null");
         }
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Word_Click(object sender, EventArgs e)
         {
             if (grdW.SelectedRows.Count == 1)
             {
@@ -143,7 +143,7 @@ namespace YourDictionaryLibrary_Dat_Tan
                     MessageBox.Show("Do Not Set Data Null", "Nofication",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void BtnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Words_Click(object sender, EventArgs e)
         {
             if (grdW.SelectedRows.Count == 1)
             {

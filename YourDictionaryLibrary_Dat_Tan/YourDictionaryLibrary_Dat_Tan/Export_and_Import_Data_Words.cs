@@ -20,8 +20,8 @@ namespace YourDictionaryLibrary_Dat_Tan
             InitializeComponent();
             business = new Words_Management();
             dataWord = new DataTable();
-            this.btnExport_Data_Words.Click += BtnExport_Click;
-            this.btnImport_Data_Words.Click += BtnImport_Click;
+            this.btnExport_Data_Words.Click += btnExport_Data_Words_Click;
+            this.btnImport_Data_Words.Click += btnImport_Data_Words_Click;
             this.btnSave_Data_Words.Click += BtnSave_Click;
             this.btnReload.Click += BtnReload_Click;
             this.Load += ExportandImport_Load;
@@ -74,7 +74,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             LoadAllIndexIn_DB();
         }
-        private void BtnImport_Click(object sender, EventArgs e)
+        private void btnImport_Data_Words_Click(object sender, EventArgs e)
         {
             try
             {
@@ -110,7 +110,7 @@ namespace YourDictionaryLibrary_Dat_Tan
                 MessageBox.Show(ex.Message);
             }
         }
-        private void BtnExport_Click(object sender, EventArgs e)
+        private void btnExport_Data_Words_Click(object sender, EventArgs e)
         {
             try
             {

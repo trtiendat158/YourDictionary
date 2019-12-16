@@ -75,19 +75,5 @@ namespace YourDictionaryLibrary_Dat_Tan
             }
             return false;
         }
-        public string[] Search_Function_ManagementForm(Word[] word, List<string> abc)
-        {
-            foreach (var item in word)
-            {
-                var EngW = db.Words.Find(item.Id);
-                abc.Add(EngW.English_Word);
-            }
-            string[] hey = new string[abc.Count-1];
-            for (int i = 0; i < abc.Count-1; i++)
-            {
-                hey[i] = abc[i];
-            }
-            return hey;
-        }
     }
 }
