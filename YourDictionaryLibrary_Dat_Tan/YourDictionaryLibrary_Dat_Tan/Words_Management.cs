@@ -63,5 +63,18 @@ namespace YourDictionaryLibrary_Dat_Tan
             db.Words.Add(word);
             db.SaveChanges();
         }
+
+        public bool Check_Word_Exist(Word[] word, string Word_to_check)
+        {
+            foreach (var item in word)
+            {
+                var EngW = db.Words.Find(item.Id);
+                if (EngW.English_Word == Word_to_check)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

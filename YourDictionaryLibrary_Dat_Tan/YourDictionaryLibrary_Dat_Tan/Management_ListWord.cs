@@ -91,14 +91,33 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             if (CheckNull() == true)
             {
-                var EngW = txtEnglishW.Text;
-                var Type = (string)cbType_Word.SelectedItem;
-                var Meaning = rtbMeaning.Text;
-                var phonetic = txtPhonetic.Text;
+                var words = this.Business.GetWords();
+                var Word_to_check = txtEnglishW.Text.ToLower();
+                if (this.Business.Check_Word_Exist(words,Word_to_check)==true)
+                {
+                    if(MessageBox.Show("This word \"" + Word_to_check+"\" already exist, are you sure want to continue creating","Nofication",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        var EngW = txtEnglishW.Text;
+                        var Type = (string)cbType_Word.SelectedItem;
+                        var Meaning = rtbMeaning.Text;
+                        var phonetic = txtPhonetic.Text;
 
-                this.Business.AddWord(EngW, Type, phonetic, Meaning);
-                MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                load_Words();
+                        this.Business.AddWord(EngW, Type, phonetic, Meaning);
+                        MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        load_Words();
+                    }
+                }
+                else
+                {
+                    var EngW = txtEnglishW.Text;
+                    var Type = (string)cbType_Word.SelectedItem;
+                    var Meaning = rtbMeaning.Text;
+                    var phonetic = txtPhonetic.Text;
+
+                    this.Business.AddWord(EngW, Type, phonetic, Meaning);
+                    MessageBox.Show("Create successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    load_Words();
+                }
             }
             else
                 MessageBox.Show("Data to Add not null");

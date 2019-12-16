@@ -49,7 +49,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             rtbMeaningW.Find("Meaning");
             rtbMeaningW.SelectionColor = Color.Blue;
         }
-
         private void btnExportAndImport_Click(object sender, EventArgs e)
         {
             var form = new Export_and_Import_Data_Words();
@@ -70,12 +69,19 @@ namespace YourDictionaryLibrary_Dat_Tan
         /// <param name="e"></param>
         private void BtnSpeak_Click(object sender, EventArgs e)
         {
-            if (cbWord.SelectedItem == null)
-                MessageBox.Show("Cant Find Word in your list Data","Thông báo");
-            else
+            try
             {
-                var data = cbWord.SelectedItem as Word;
-                this.speakEngW.speak(data.English_Word);
+                if (cbWord.SelectedItem == null)
+                    MessageBox.Show("Cant Find Word in your list Data", "Thông báo");
+                else
+                {
+                    var data = cbWord.SelectedItem as Word;
+                    this.speakEngW.speak(data.English_Word);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + " (Check Your Conection)", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void LoadData()
