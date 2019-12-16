@@ -37,14 +37,14 @@
             this.lblTypeW = new System.Windows.Forms.Label();
             this.lblEnlishW = new System.Windows.Forms.Label();
             this.rtbMeaning = new System.Windows.Forms.RichTextBox();
-            this.cbType = new System.Windows.Forms.ComboBox();
+            this.cbType_Word = new System.Windows.Forms.ComboBox();
             this.grdW = new System.Windows.Forms.DataGridView();
             this.lblTitleManage = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd_Word = new System.Windows.Forms.Button();
+            this.btnDelete_Words = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSearch_Word = new System.Windows.Forms.Button();
+            this.btnEdit_Word = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panelQuanLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdW)).BeginInit();
@@ -67,7 +67,7 @@
             this.panelQuanLy.Controls.Add(this.lblTypeW);
             this.panelQuanLy.Controls.Add(this.lblEnlishW);
             this.panelQuanLy.Controls.Add(this.rtbMeaning);
-            this.panelQuanLy.Controls.Add(this.cbType);
+            this.panelQuanLy.Controls.Add(this.cbType_Word);
             this.panelQuanLy.Controls.Add(this.txtEnglishW);
             this.panelQuanLy.Location = new System.Drawing.Point(33, 60);
             this.panelQuanLy.Margin = new System.Windows.Forms.Padding(4);
@@ -144,22 +144,22 @@
             this.rtbMeaning.TabIndex = 2;
             this.rtbMeaning.Text = "";
             // 
-            // cbType
+            // cbType_Word
             // 
-            this.cbType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbType.FormattingEnabled = true;
-            this.cbType.Items.AddRange(new object[] {
+            this.cbType_Word.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbType_Word.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbType_Word.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbType_Word.FormattingEnabled = true;
+            this.cbType_Word.Items.AddRange(new object[] {
             "Verb",
             "Noun",
             "Adjective ",
             "Adverb "});
-            this.cbType.Location = new System.Drawing.Point(4, 166);
-            this.cbType.Margin = new System.Windows.Forms.Padding(4);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(263, 24);
-            this.cbType.TabIndex = 1;
+            this.cbType_Word.Location = new System.Drawing.Point(4, 166);
+            this.cbType_Word.Margin = new System.Windows.Forms.Padding(4);
+            this.cbType_Word.Name = "cbType_Word";
+            this.cbType_Word.Size = new System.Drawing.Size(263, 24);
+            this.cbType_Word.TabIndex = 1;
             // 
             // grdW
             // 
@@ -190,29 +190,29 @@
             this.lblTitleManage.TabIndex = 39;
             this.lblTitleManage.Text = "MANAGE DICTIONARY";
             // 
-            // btnAdd
+            // btnAdd_Word
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(405, 309);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(107, 38);
-            this.btnAdd.TabIndex = 37;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd_Word.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd_Word.Location = new System.Drawing.Point(405, 309);
+            this.btnAdd_Word.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd_Word.Name = "btnAdd_Word";
+            this.btnAdd_Word.Size = new System.Drawing.Size(107, 38);
+            this.btnAdd_Word.TabIndex = 37;
+            this.btnAdd_Word.Text = "Add";
+            this.btnAdd_Word.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd_Word.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // btnDelete_Words
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(680, 310);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(103, 38);
-            this.btnDelete.TabIndex = 36;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete_Words.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete_Words.Location = new System.Drawing.Point(680, 310);
+            this.btnDelete_Words.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete_Words.Name = "btnDelete_Words";
+            this.btnDelete_Words.Size = new System.Drawing.Size(103, 38);
+            this.btnDelete_Words.TabIndex = 36;
+            this.btnDelete_Words.Text = "Delete";
+            this.btnDelete_Words.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete_Words.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
@@ -227,30 +227,30 @@
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // btnSearch
+            // btnSearch_Word
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(157, 310);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 38);
-            this.btnSearch.TabIndex = 34;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch_Word.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch_Word.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch_Word.Location = new System.Drawing.Point(157, 310);
+            this.btnSearch_Word.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch_Word.Name = "btnSearch_Word";
+            this.btnSearch_Word.Size = new System.Drawing.Size(120, 38);
+            this.btnSearch_Word.TabIndex = 34;
+            this.btnSearch_Word.Text = "Search";
+            this.btnSearch_Word.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch_Word.UseVisualStyleBackColor = true;
             // 
-            // btnEdit
+            // btnEdit_Word
             // 
-            this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(544, 309);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(104, 38);
-            this.btnEdit.TabIndex = 38;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit_Word.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit_Word.Location = new System.Drawing.Point(544, 309);
+            this.btnEdit_Word.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEdit_Word.Name = "btnEdit_Word";
+            this.btnEdit_Word.Size = new System.Drawing.Size(104, 38);
+            this.btnEdit_Word.TabIndex = 38;
+            this.btnEdit_Word.Text = "Edit";
+            this.btnEdit_Word.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdit_Word.UseVisualStyleBackColor = true;
             // 
             // txtSearch
             // 
@@ -271,11 +271,11 @@
             this.Controls.Add(this.panelQuanLy);
             this.Controls.Add(this.grdW);
             this.Controls.Add(this.lblTitleManage);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd_Word);
+            this.Controls.Add(this.btnDelete_Words);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnSearch_Word);
+            this.Controls.Add(this.btnEdit_Word);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -298,14 +298,14 @@
         private System.Windows.Forms.Label lblTypeW;
         private System.Windows.Forms.Label lblEnlishW;
         private System.Windows.Forms.RichTextBox rtbMeaning;
-        private System.Windows.Forms.ComboBox cbType;
+        private System.Windows.Forms.ComboBox cbType_Word;
         private System.Windows.Forms.DataGridView grdW;
         private System.Windows.Forms.Label lblTitleManage;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd_Word;
+        private System.Windows.Forms.Button btnDelete_Words;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSearch_Word;
+        private System.Windows.Forms.Button btnEdit_Word;
         private System.Windows.Forms.TextBox txtPhonetic;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;

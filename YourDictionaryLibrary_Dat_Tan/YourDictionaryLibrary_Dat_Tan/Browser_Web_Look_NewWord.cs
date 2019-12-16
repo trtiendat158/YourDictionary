@@ -17,10 +17,10 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             InitializeComponent();
             wb = new WebBrowser();
-            this.btnCambrigde.Click += BtnGG_Click;
-            this.btnVDict.Click += BtnVdict_Click;
-            this.btnDict.Click += BtnDict_Click;
-            this.btnGGS.Click += BtnGGS_Click;
+            this.btn_Web_Cambrigde.Click += BtnGG_Click;
+            this.btn_Web_VDict.Click += BtnVdict_Click;
+            this.btn_Web_Dict.Click += BtnDict_Click;
+            this.btn_Web_GGS.Click += BtnGGS_Click;
             wb.ScriptErrorsSuppressed = true;
             wb.Height = 548;
             wb.Width = 1064;

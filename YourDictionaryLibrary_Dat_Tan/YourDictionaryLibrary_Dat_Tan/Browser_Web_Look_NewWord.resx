@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnCambrigde.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Web_Cambrigde.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
         dAAAEnQB3mYfeAAAA/NJREFUSEvFln9o1HUYx5/Kitr37r53O29ud67dj7GWhkPEGUPbD/fTmtZWlEZk
@@ -141,7 +141,7 @@
         5ZNB9A8+jatBJ/BBDQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnVDict.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Web_VDict.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
         dAAAEnQB3mYfeAAAAbhJREFUSEvtlj1Ow0AQhfcI8c8tKKioKTkDUmwHECUFFT+ipYEL2I4QygGg5yL0
@@ -154,7 +154,7 @@
         gHrGdYvqfzX342oYPMxHYTLfw+PjCdLiWioxhdZ/BJT6AQpaeTdg7lUYAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnDict.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Web_Dict.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
         dAAAEnQB3mYfeAAAAxhJREFUSEvtVFtIVFEUnWfOODiOMr4dvTO+iyzLtEQDMyMqKaisCYOSJCIqKA2F
@@ -173,7 +173,7 @@
         3WyV9axBnyhsxcXFSmFfwi/sM/iFfQQn/AWNS2n30xKCfAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnGGS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Web_GGS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
         dAAAEnQB3mYfeAAAAX9JREFUSEvNjb9Kw1AcRgO24lAQfIxOQhN0K02li5OVLC4+hSI4uLTP0dEqPoF2

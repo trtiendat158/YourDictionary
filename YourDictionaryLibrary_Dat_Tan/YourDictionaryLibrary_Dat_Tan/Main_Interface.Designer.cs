@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Interface));
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnManage = new System.Windows.Forms.Button();
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.btnLookUp = new System.Windows.Forms.Button();
-            this.btnSpeak = new System.Windows.Forms.Button();
+            this.btnManage_ListWord = new System.Windows.Forms.Button();
+            this.btnInfo_TeamBuilding = new System.Windows.Forms.Button();
+            this.btnLookUp_Word_inWeb = new System.Windows.Forms.Button();
+            this.btnSpeak_Word = new System.Windows.Forms.Button();
             this.cbWord = new System.Windows.Forms.ComboBox();
             this.rtbMeaningW = new System.Windows.Forms.RichTextBox();
-            this.btnExportAndImport = new System.Windows.Forms.Button();
+            this.btnExport_and_Import_Data_Words = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -48,74 +48,73 @@
             this.lblTitle.Location = new System.Drawing.Point(203, 41);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(409, 31);
+            this.lblTitle.Size = new System.Drawing.Size(515, 38);
             this.lblTitle.TabIndex = 31;
             this.lblTitle.Text = "YOUR DICTIONARY LIBRARY";
             // 
-            // btnManage
+            // btnManage_ListWord
             // 
-            this.btnManage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManage.ForeColor = System.Drawing.Color.Black;
-            this.btnManage.Image = ((System.Drawing.Image)(resources.GetObject("btnManage.Image")));
-            this.btnManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManage.Location = new System.Drawing.Point(512, 105);
-            this.btnManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnManage.Name = "btnManage";
-            this.btnManage.Size = new System.Drawing.Size(135, 45);
-            this.btnManage.TabIndex = 35;
-            this.btnManage.Text = "Manage";
-            this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnManage.UseVisualStyleBackColor = true;
+            this.btnManage_ListWord.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManage_ListWord.ForeColor = System.Drawing.Color.Black;
+            this.btnManage_ListWord.Image = ((System.Drawing.Image)(resources.GetObject("btnManage_ListWord.Image")));
+            this.btnManage_ListWord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManage_ListWord.Location = new System.Drawing.Point(512, 105);
+            this.btnManage_ListWord.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManage_ListWord.Name = "btnManage_ListWord";
+            this.btnManage_ListWord.Size = new System.Drawing.Size(135, 45);
+            this.btnManage_ListWord.TabIndex = 35;
+            this.btnManage_ListWord.Text = "Manage";
+            this.btnManage_ListWord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManage_ListWord.UseVisualStyleBackColor = true;
             // 
-            // btnInfo
+            // btnInfo_TeamBuilding
             // 
-            this.btnInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfo.ForeColor = System.Drawing.Color.Black;
-            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
-            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.Location = new System.Drawing.Point(656, 105);
-            this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(116, 45);
-            this.btnInfo.TabIndex = 34;
-            this.btnInfo.Text = "Info";
-            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo_TeamBuilding.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo_TeamBuilding.ForeColor = System.Drawing.Color.Black;
+            this.btnInfo_TeamBuilding.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo_TeamBuilding.Image")));
+            this.btnInfo_TeamBuilding.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo_TeamBuilding.Location = new System.Drawing.Point(656, 105);
+            this.btnInfo_TeamBuilding.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInfo_TeamBuilding.Name = "btnInfo_TeamBuilding";
+            this.btnInfo_TeamBuilding.Size = new System.Drawing.Size(116, 45);
+            this.btnInfo_TeamBuilding.TabIndex = 34;
+            this.btnInfo_TeamBuilding.Text = "Info";
+            this.btnInfo_TeamBuilding.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo_TeamBuilding.UseVisualStyleBackColor = true;
             // 
-            // btnLookUp
+            // btnLookUp_Word_inWeb
             // 
-            this.btnLookUp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLookUp.ForeColor = System.Drawing.Color.Black;
-            this.btnLookUp.Image = ((System.Drawing.Image)(resources.GetObject("btnLookUp.Image")));
-            this.btnLookUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLookUp.Location = new System.Drawing.Point(255, 205);
-            this.btnLookUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLookUp.Name = "btnLookUp";
-            this.btnLookUp.Size = new System.Drawing.Size(150, 45);
-            this.btnLookUp.TabIndex = 39;
-            this.btnLookUp.Text = "Look up";
-            this.btnLookUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLookUp.UseVisualStyleBackColor = true;
+            this.btnLookUp_Word_inWeb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLookUp_Word_inWeb.ForeColor = System.Drawing.Color.Black;
+            this.btnLookUp_Word_inWeb.Image = ((System.Drawing.Image)(resources.GetObject("btnLookUp_Word_inWeb.Image")));
+            this.btnLookUp_Word_inWeb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLookUp_Word_inWeb.Location = new System.Drawing.Point(236, 205);
+            this.btnLookUp_Word_inWeb.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLookUp_Word_inWeb.Name = "btnLookUp_Word_inWeb";
+            this.btnLookUp_Word_inWeb.Size = new System.Drawing.Size(183, 45);
+            this.btnLookUp_Word_inWeb.TabIndex = 39;
+            this.btnLookUp_Word_inWeb.Text = "    Look up in web";
+            this.btnLookUp_Word_inWeb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLookUp_Word_inWeb.UseVisualStyleBackColor = true;
             // 
-            // btnSpeak
+            // btnSpeak_Word
             // 
-            this.btnSpeak.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpeak.ForeColor = System.Drawing.Color.Black;
-            this.btnSpeak.Image = ((System.Drawing.Image)(resources.GetObject("btnSpeak.Image")));
-            this.btnSpeak.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSpeak.Location = new System.Drawing.Point(380, 105);
-            this.btnSpeak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSpeak.Name = "btnSpeak";
-            this.btnSpeak.Size = new System.Drawing.Size(123, 45);
-            this.btnSpeak.TabIndex = 40;
-            this.btnSpeak.Text = "Speak";
-            this.btnSpeak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSpeak.UseVisualStyleBackColor = true;
+            this.btnSpeak_Word.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpeak_Word.ForeColor = System.Drawing.Color.Black;
+            this.btnSpeak_Word.Image = ((System.Drawing.Image)(resources.GetObject("btnSpeak_Word.Image")));
+            this.btnSpeak_Word.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSpeak_Word.Location = new System.Drawing.Point(380, 105);
+            this.btnSpeak_Word.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSpeak_Word.Name = "btnSpeak_Word";
+            this.btnSpeak_Word.Size = new System.Drawing.Size(123, 45);
+            this.btnSpeak_Word.TabIndex = 40;
+            this.btnSpeak_Word.Text = "Speak";
+            this.btnSpeak_Word.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSpeak_Word.UseVisualStyleBackColor = true;
             // 
             // cbWord
             // 
             this.cbWord.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbWord.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbWord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbWord.FormattingEnabled = true;
             this.cbWord.Location = new System.Drawing.Point(15, 175);
@@ -133,33 +132,33 @@
             this.rtbMeaningW.TabIndex = 44;
             this.rtbMeaningW.Text = "";
             // 
-            // btnExportAndImport
+            // btnExport_and_Import_Data_Words
             // 
-            this.btnExportAndImport.Image = ((System.Drawing.Image)(resources.GetObject("btnExportAndImport.Image")));
-            this.btnExportAndImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportAndImport.Location = new System.Drawing.Point(255, 282);
-            this.btnExportAndImport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnExportAndImport.Name = "btnExportAndImport";
-            this.btnExportAndImport.Size = new System.Drawing.Size(150, 45);
-            this.btnExportAndImport.TabIndex = 47;
-            this.btnExportAndImport.Text = "Export/Import";
-            this.btnExportAndImport.UseVisualStyleBackColor = true;
+            this.btnExport_and_Import_Data_Words.Image = ((System.Drawing.Image)(resources.GetObject("btnExport_and_Import_Data_Words.Image")));
+            this.btnExport_and_Import_Data_Words.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport_and_Import_Data_Words.Location = new System.Drawing.Point(236, 282);
+            this.btnExport_and_Import_Data_Words.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExport_and_Import_Data_Words.Name = "btnExport_and_Import_Data_Words";
+            this.btnExport_and_Import_Data_Words.Size = new System.Drawing.Size(183, 45);
+            this.btnExport_and_Import_Data_Words.TabIndex = 47;
+            this.btnExport_and_Import_Data_Words.Text = "   Export / Import";
+            this.btnExport_and_Import_Data_Words.UseVisualStyleBackColor = true;
             // 
             // Main_Interface
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(786, 769);
-            this.Controls.Add(this.btnExportAndImport);
+            this.Controls.Add(this.btnExport_and_Import_Data_Words);
             this.Controls.Add(this.rtbMeaningW);
             this.Controls.Add(this.cbWord);
-            this.Controls.Add(this.btnSpeak);
-            this.Controls.Add(this.btnLookUp);
+            this.Controls.Add(this.btnSpeak_Word);
+            this.Controls.Add(this.btnLookUp_Word_inWeb);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.btnManage);
-            this.Controls.Add(this.btnInfo);
+            this.Controls.Add(this.btnManage_ListWord);
+            this.Controls.Add(this.btnInfo_TeamBuilding);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -174,13 +173,13 @@
 
         #endregion
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnManage;
-        private System.Windows.Forms.Button btnInfo;
-        private System.Windows.Forms.Button btnLookUp;
-        private System.Windows.Forms.Button btnSpeak;
+        private System.Windows.Forms.Button btnManage_ListWord;
+        private System.Windows.Forms.Button btnInfo_TeamBuilding;
+        private System.Windows.Forms.Button btnLookUp_Word_inWeb;
+        private System.Windows.Forms.Button btnSpeak_Word;
         internal System.Windows.Forms.ComboBox cbWord;
         private System.Windows.Forms.RichTextBox rtbMeaningW;
-        private System.Windows.Forms.Button btnExportAndImport;
+        private System.Windows.Forms.Button btnExport_and_Import_Data_Words;
     }
 }
 

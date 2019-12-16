@@ -112,11 +112,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Speak_Phonetic_Word.cs" />
-    <Compile Include="Export_and_Import_Data.cs">
+    <Compile Include="Export_and_Import_Data_Words.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Export_and_Import_Data.Designer.cs">
-      <DependentUpon>Export_and_Import_Data.cs</DependentUpon>
+    <Compile Include="Export_and_Import_Data_Words.Designer.cs">
+      <DependentUpon>Export_and_Import_Data_Words.cs</DependentUpon>
     </Compile>
     <Compile Include="Word.cs">
       <DependentUpon>Models.tt</DependentUpon>
@@ -143,8 +143,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Export_and_Import_Data.resx">
-      <DependentUpon>Export_and_Import_Data.cs</DependentUpon>
+    <EmbeddedResource Include="Export_and_Import_Data_Words.resx">
+      <DependentUpon>Export_and_Import_Data_Words.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

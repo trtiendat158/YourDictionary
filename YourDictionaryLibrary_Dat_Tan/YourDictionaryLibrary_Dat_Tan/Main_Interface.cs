@@ -20,17 +20,39 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.Business = new Words_Management();
             speakEngW = new Speak_Phonetic_Word();
             this.Load += Main_Interface_Load;
-            this.btnManage.Click += BtnManage_Click;
-            this.btnInfo.Click += BtnInfo_Click;
-            this.btnLookUp.Click += BtnLookUp_Click;
-            this.btnSpeak.Click += BtnSpeak_Click;
+            this.btnManage_ListWord.Click += BtnManage_Click;
+            this.btnInfo_TeamBuilding.Click += BtnInfo_Click;
+            this.btnLookUp_Word_inWeb.Click += BtnLookUp_Click;
+            this.btnSpeak_Word.Click += BtnSpeak_Click;
             this.cbWord.KeyDown += CbWord_KeyDown;
-            this.btnExportAndImport.Click += btnExportAndImport_Click;
+            this.btnExport_and_Import_Data_Words.Click += btnExportAndImport_Click;
             this.MaximizeBox = false;
+            this.cbWord.Click += CbWord_Click;
         }
+
+        private void CbWord_Click(object sender, EventArgs e)
+        {
+            var data = cbWord.SelectedItem as Word;
+            rtbMeaningW.Text = "Type:" + "  " + data.Word_Type + "\r\n" +
+                "Phonetic: " + data.Phonetic + "\r\n" +
+                "Meaning:\r\n" + " \t" + data.Meaning;
+            rtbMeaningW.Find(data.Word_Type);
+            rtbMeaningW.SelectionColor = Color.Black;
+            rtbMeaningW.Find(data.Phonetic);
+            rtbMeaningW.SelectionColor = Color.Black;
+            rtbMeaningW.Find(data.Meaning);
+            rtbMeaningW.SelectionColor = Color.Black;
+            rtbMeaningW.Find("Type:");
+            rtbMeaningW.SelectionColor = Color.Red;
+            rtbMeaningW.Find("Phonetic:");
+            rtbMeaningW.SelectionColor = Color.Red;
+            rtbMeaningW.Find("Meaning");
+            rtbMeaningW.SelectionColor = Color.Blue;
+        }
+
         private void btnExportAndImport_Click(object sender, EventArgs e)
         {
-            var form = new Export_and_Import_Data();
+            var form = new Export_and_Import_Data_Words();
             form.ShowDialog();
             LoadData();
         }
@@ -38,7 +60,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnLookUp.PerformClick();
+                btnLookUp_Word_inWeb.PerformClick();
             }
         }
         /// <summary>
@@ -68,32 +90,10 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         private void BtnLookUp_Click(object sender, EventArgs e)
         {
-            if(cbWord.SelectedItem == null)
+            if (MessageBox.Show("This Function Help You Look Up in another Web, Click \"OK\" To continue", "Nofication",MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                if(MessageBox.Show("This word don't exist, do you want to look up this in another web ?", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                {
-                    var Browser = new Browser_Web_Look_NewWord();
-                    Browser.ShowDialog();
-                }
-            }
-            else
-            {
-                var data = cbWord.SelectedItem as Word;
-                rtbMeaningW.Text = "Type:" + "  " + data.Word_Type + "\r\n"+ 
-                    "Phonetic: "+data.Phonetic+"\r\n"+
-                    "Meaning:\r\n" + " \t" + data.Meaning;
-                rtbMeaningW.Find(data.Word_Type);
-                rtbMeaningW.SelectionColor = Color.Black;
-                rtbMeaningW.Find(data.Phonetic);
-                rtbMeaningW.SelectionColor = Color.Black;
-                rtbMeaningW.Find(data.Meaning);
-                rtbMeaningW.SelectionColor = Color.Black;
-                rtbMeaningW.Find("Type:");
-                rtbMeaningW.SelectionColor = Color.Red;
-                rtbMeaningW.Find("Phonetic:");
-                rtbMeaningW.SelectionColor = Color.Red;
-                rtbMeaningW.Find("Meaning");
-                rtbMeaningW.SelectionColor = Color.Blue;
+                var Browser = new Browser_Web_Look_NewWord();
+                Browser.ShowDialog();
             }
         }
         private void BtnInfo_Click(object sender, EventArgs e)

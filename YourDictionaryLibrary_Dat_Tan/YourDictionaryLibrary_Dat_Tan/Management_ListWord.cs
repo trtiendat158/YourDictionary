@@ -18,17 +18,17 @@ namespace YourDictionaryLibrary_Dat_Tan
             InitializeComponent();
             this.Business = new Words_Management();
             this.Load += Management_Load;
-            this.btnAdd.Click += BtnAdd_Click;
-            this.btnDelete.Click += BtnDelete_Click;
-            this.btnEdit.Click += BtnEdit_Click;
+            this.btnAdd_Word.Click += BtnAdd_Click;
+            this.btnDelete_Words.Click += BtnDelete_Click;
+            this.btnEdit_Word.Click += BtnEdit_Click;
             this.btnClose.Click += BtnClose_Click;
             this.grdW.CellClick += GrdW_CellClick;
-            this.btnSearch.Click += BtnSearch_Click;
+            this.btnSearch_Word.Click += BtnSearch_Click;
             this.txtSearch.KeyDown += TxtSearch_KeyDown;
         }
         private bool CheckNull()
         {
-            if (txtEnglishW.Text == "" || cbType.Text == "" ||
+            if (txtEnglishW.Text == "" || cbType_Word.Text == "" ||
             rtbMeaning.Text == "" ||
             txtPhonetic.Text == "")
             {
@@ -40,7 +40,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnSearch.PerformClick();
+                btnSearch_Word.PerformClick();
             }
         }
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace YourDictionaryLibrary_Dat_Tan
                         grdW.CurrentCell = row.Cells[1];
                         var word = (Word)row.DataBoundItem;
                         txtEnglishW.Text = word.English_Word;
-                        cbType.Text = word.Word_Type;
+                        cbType_Word.Text = word.Word_Type;
                         txtPhonetic.Text = word.Phonetic;
                         rtbMeaning.Text = word.Meaning;
                         return;
@@ -74,7 +74,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             var word = (Word)grdW.SelectedRows[0].DataBoundItem;
             txtEnglishW.Text = word.English_Word;
-            cbType.Text = word.Word_Type;
+            cbType_Word.Text = word.Word_Type;
             rtbMeaning.Text = word.Meaning;
             txtPhonetic.Text = word.Phonetic;
         }
@@ -92,7 +92,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             if (CheckNull() == true)
             {
                 var EngW = txtEnglishW.Text;
-                var Type = (string)cbType.SelectedItem;
+                var Type = (string)cbType_Word.SelectedItem;
                 var Meaning = rtbMeaning.Text;
                 var phonetic = txtPhonetic.Text;
 
@@ -111,7 +111,7 @@ namespace YourDictionaryLibrary_Dat_Tan
                 {
                     var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
                     var EngW = txtEnglishW.Text;
-                    var Type = (string)cbType.SelectedItem;
+                    var Type = (string)cbType_Word.SelectedItem;
                     var Meaning = rtbMeaning.Text;
                     var phonetic = txtPhonetic.Text;
                     this.Business.EditWord(Word.Id, EngW, Type, phonetic, Meaning);

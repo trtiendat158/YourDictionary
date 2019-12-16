@@ -11,21 +11,21 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    public partial class Export_and_Import_Data : Form
+    public partial class Export_and_Import_Data_Words : Form
     {
         private Words_Management business;
         DataTable dataWord;
-        public Export_and_Import_Data()
+        public Export_and_Import_Data_Words()
         {
             InitializeComponent();
             business = new Words_Management();
             dataWord = new DataTable();
-            this.btnExport.Click += BtnExport_Click;
-            this.btnImport.Click += BtnImport_Click;
-            this.btnSave.Click += BtnSave_Click;
+            this.btnExport_Data_Words.Click += BtnExport_Click;
+            this.btnImport_Data_Words.Click += BtnImport_Click;
+            this.btnSave_Data_Words.Click += BtnSave_Click;
             this.btnReload.Click += BtnReload_Click;
             this.Load += ExportandImport_Load;
-            btnSave.Enabled = false;
+            btnSave_Data_Words.Enabled = false;
             this.grdForEX_IM.ReadOnly = true;
             this.grdForEX_IM.AllowUserToResizeRows = false;
             this.grdForEX_IM.AllowUserToResizeColumns = false;
@@ -34,9 +34,9 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             dataWord = new DataTable();
             LoadAllIndexIn_DB();
-            btnImport.Enabled = true;
-            btnExport.Enabled = true;
-            btnSave.Enabled = false;
+            btnImport_Data_Words.Enabled = true;
+            btnExport_Data_Words.Enabled = true;
+            btnSave_Data_Words.Enabled = false;
             MessageBox.Show("Reload Successfully");
         }
         private void BtnSave_Click(object sender, EventArgs e)
@@ -54,11 +54,11 @@ namespace YourDictionaryLibrary_Dat_Tan
                     }
                     business.AddWordFromImport(abc);
                 }
-                btnSave.Enabled = false;
+                btnSave_Data_Words.Enabled = false;
                 MessageBox.Show("Save Successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadAllIndexIn_DB();
-                btnExport.Enabled = true;
-                btnImport.Enabled = false;
+                btnExport_Data_Words.Enabled = true;
+                btnImport_Data_Words.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -78,8 +78,8 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             try
             {
-                btnSave.Enabled = true;
-                btnExport.Enabled = false;
+                btnSave_Data_Words.Enabled = true;
+                btnExport_Data_Words.Enabled = false;
                 var dialog = new OpenFileDialog();
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -114,7 +114,7 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             try
             {
-                btnSave.Enabled = false;
+                btnSave_Data_Words.Enabled = false;
                 int CountRow = grdForEX_IM.RowCount;
                 int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
                 txtExport.Text = "English Word,Type Word,Phonetic,Meaning\r\n";
