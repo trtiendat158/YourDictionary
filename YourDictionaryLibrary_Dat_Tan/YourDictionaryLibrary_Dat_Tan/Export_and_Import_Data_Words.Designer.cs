@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Export_and_Import_Data_Words));
             this.grdForEX_IM = new System.Windows.Forms.DataGridView();
             this.wordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -48,7 +49,7 @@
             this.grdForEX_IM.AllowUserToDeleteRows = false;
             this.grdForEX_IM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdForEX_IM.Location = new System.Drawing.Point(0, 30);
-            this.grdForEX_IM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdForEX_IM.Margin = new System.Windows.Forms.Padding(4);
             this.grdForEX_IM.Name = "grdForEX_IM";
             this.grdForEX_IM.ReadOnly = true;
             this.grdForEX_IM.RowHeadersVisible = false;
@@ -70,38 +71,38 @@
             this.btnReload});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnExport_Data_Words
             // 
             this.btnExport_Data_Words.Name = "btnExport_Data_Words";
-            this.btnExport_Data_Words.Size = new System.Drawing.Size(66, 26);
+            this.btnExport_Data_Words.Size = new System.Drawing.Size(66, 24);
             this.btnExport_Data_Words.Text = "Export";
             // 
             // btnImport_Data_Words
             // 
             this.btnImport_Data_Words.Name = "btnImport_Data_Words";
-            this.btnImport_Data_Words.Size = new System.Drawing.Size(68, 26);
+            this.btnImport_Data_Words.Size = new System.Drawing.Size(68, 24);
             this.btnImport_Data_Words.Text = "Import";
             // 
             // btnSave_Data_Words
             // 
             this.btnSave_Data_Words.Name = "btnSave_Data_Words";
-            this.btnSave_Data_Words.Size = new System.Drawing.Size(54, 26);
+            this.btnSave_Data_Words.Size = new System.Drawing.Size(54, 24);
             this.btnSave_Data_Words.Text = "Save";
             // 
             // btnReload
             // 
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(70, 26);
+            this.btnReload.Size = new System.Drawing.Size(70, 24);
             this.btnReload.Text = "Reload";
             // 
             // txtExport
             // 
             this.txtExport.Location = new System.Drawing.Point(752, 30);
-            this.txtExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtExport.Margin = new System.Windows.Forms.Padding(4);
             this.txtExport.Multiline = true;
             this.txtExport.Name = "txtExport";
             this.txtExport.ReadOnly = true;
@@ -116,11 +117,12 @@
             this.Controls.Add(this.txtExport);
             this.Controls.Add(this.grdForEX_IM);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Export_and_Import_Data_Words";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Test";
+            this.Text = "Import and Export Data";
             ((System.ComponentModel.ISupportInitialize)(this.grdForEX_IM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wordBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
