@@ -34,28 +34,36 @@ namespace YourDictionaryLibrary_Dat_Tan
         {
             dataWord = new DataTable();
             LoadAllIndexIn_DB();
+            btnImport.Enabled = true;
             btnExport.Enabled = true;
             btnSave.Enabled = false;
             MessageBox.Show("Reload Successfully");
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            int CountRow = grdForEX_IM.RowCount;
-            int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
-            string[] abc = new string[4];
-            for (int i = 0; i <= CountRow - 1; i++)
+            try
             {
-                for (int j = 0; j <= CountCeil - 1; j++)
+                int CountRow = grdForEX_IM.RowCount;
+                int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
+                string[] abc = new string[4];
+                for (int i = 0; i <= CountRow - 1; i++)
                 {
-                        abc[j]=grdForEX_IM.Rows[i].Cells[j].Value.ToString();
+                    for (int j = 0; j <= CountCeil - 1; j++)
+                    {
+                        abc[j] = grdForEX_IM.Rows[i].Cells[j].Value.ToString();
+                    }
+                    business.AddWordFromImport(abc);
                 }
-                business.AddWordFromImport(abc);
+                btnSave.Enabled = false;
+                MessageBox.Show("Save Successfully", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadAllIndexIn_DB();
+                btnExport.Enabled = true;
+                btnImport.Enabled = false;
             }
-            btnSave.Enabled = false;
-            MessageBox.Show("Save Successfully","Nofication",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            LoadAllIndexIn_DB();
-            btnExport.Enabled = true;
-            btnImport.Enabled = false;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void LoadAllIndexIn_DB()
         {
@@ -68,55 +76,69 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         private void BtnImport_Click(object sender, EventArgs e)
         {
-            btnSave.Enabled = true;
-            btnExport.Enabled = false;
-            var dialog = new OpenFileDialog();
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            try
             {
-                string[] listImport = File.ReadAllLines(dialog.FileName);
-                string[] data = null;
-                int x = 0;
-                
-                foreach (string text_line in listImport)
+                btnSave.Enabled = true;
+                btnExport.Enabled = false;
+                var dialog = new OpenFileDialog();
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    data = text_line.Split(',');
-                    if (x == 0)
+                    string[] listImport = File.ReadAllLines(dialog.FileName);
+                    string[] data = null;
+                    int x = 0;
+
+                    foreach (string text_line in listImport)
                     {
-                        for (int i = 0; i <= data.Count() - 1; i++)
+                        data = text_line.Split(',');
+                        if (x == 0)
                         {
-                            dataWord.Columns.Add(data[i]);
+                            for (int i = 0; i <= data.Count() - 1; i++)
+                            {
+                                dataWord.Columns.Add(data[i]);
+                            }
+                            x++;
                         }
-                        x++;
+                        else
+                            dataWord.Rows.Add(data);
                     }
-                    else
-                        dataWord.Rows.Add(data);
+                    grdForEX_IM.DataSource = dataWord;
+                    grdForEX_IM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
-                grdForEX_IM.DataSource = dataWord;
-                grdForEX_IM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void BtnExport_Click(object sender, EventArgs e)
         {
-            btnSave.Enabled = false;
-            int CountRow = grdForEX_IM.RowCount;
-            int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
-            txtExport.Text = "English Word,Type Word,Phonetic,Meaning\r\n";
-            for(int i =0; i <= CountRow - 1; i++)
+            try
             {
-                for(int j =1; j <= CountCeil - 1; j++)
+                btnSave.Enabled = false;
+                int CountRow = grdForEX_IM.RowCount;
+                int CountCeil = grdForEX_IM.Rows[0].Cells.Count;
+                txtExport.Text = "English Word,Type Word,Phonetic,Meaning\r\n";
+                for (int i = 0; i <= CountRow - 1; i++)
                 {
-                    if (j == CountCeil - 1)
-                        txtExport.Text = txtExport.Text + grdForEX_IM.Rows[i].Cells[j].Value.ToString();
-                    else
-                        txtExport.Text = txtExport.Text + grdForEX_IM.Rows[i].Cells[j].Value.ToString() + ",";
+                    for (int j = 1; j <= CountCeil - 1; j++)
+                    {
+                        if (j == CountCeil - 1)
+                            txtExport.Text = txtExport.Text + grdForEX_IM.Rows[i].Cells[j].Value.ToString();
+                        else
+                            txtExport.Text = txtExport.Text + grdForEX_IM.Rows[i].Cells[j].Value.ToString() + ",";
+                    }
+                    txtExport.Text = txtExport.Text + "\r\n";
                 }
-                txtExport.Text = txtExport.Text + "\r\n";
+                var dialog = new SaveFileDialog();
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    File.WriteAllText(dialog.FileName + ".csv", txtExport.Text);
+                    MessageBox.Show("Export Successfully");
+                }
             }
-            var dialog = new SaveFileDialog();
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            catch (Exception ex)
             {
-                File.WriteAllText(dialog.FileName +".csv", txtExport.Text);
-                MessageBox.Show("Export Successfully");
+                MessageBox.Show(ex.Message);
             }
         }
     }

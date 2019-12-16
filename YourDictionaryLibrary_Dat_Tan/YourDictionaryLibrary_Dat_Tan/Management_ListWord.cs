@@ -124,13 +124,28 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            
             if (grdW.SelectedRows.Count == 1)
             {
-                if(MessageBox.Show("Are You Sure Want To Delete this row", "Nofication", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show("Are You Sure Want To Delete this row", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
-                    this.Business.DeleteWord(Word.Id);
+                    if (MessageBox.Show("Are You Sure Want To Delete this row", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    {
+                        var Word = (Word)grdW.SelectedRows[0].DataBoundItem;
+                        this.Business.DeleteWord(Word.Id);
+                        MessageBox.Show("Delete Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        load_Words();
+                    }
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Warning!!! Are You Sure Want To Delete These Rows", "Nofication", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    for (int i = 1; i < grdW.SelectedRows.Count; i++)
+                    {
+                        var word = (Word)grdW.SelectedRows[i].DataBoundItem;
+                        this.Business.DeleteWord(word.Id);
+                    }
                     MessageBox.Show("Delete Compelete", "Nofication", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     load_Words();
                 }
