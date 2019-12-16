@@ -118,11 +118,11 @@
     <Compile Include="Export_and_Import_Data_Words.Designer.cs">
       <DependentUpon>Export_and_Import_Data_Words.cs</DependentUpon>
     </Compile>
-    <Compile Include="Testing_Words.cs">
+    <Compile Include="Testing_Review_Words.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Testing_Words.Designer.cs">
-      <DependentUpon>Testing_Words.cs</DependentUpon>
+    <Compile Include="Testing_Review_Words.Designer.cs">
+      <DependentUpon>Testing_Review_Words.cs</DependentUpon>
     </Compile>
     <Compile Include="Word.cs">
       <DependentUpon>Models.tt</DependentUpon>
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="Export_and_Import_Data_Words.resx">
       <DependentUpon>Export_and_Import_Data_Words.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Testing_Words.resx">
-      <DependentUpon>Testing_Words.cs</DependentUpon>
+    <EmbeddedResource Include="Testing_Review_Words.resx">
+      <DependentUpon>Testing_Review_Words.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

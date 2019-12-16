@@ -9,7 +9,7 @@ namespace YourDictionaryLibrary_Dat_Tan
     class Words_Management
     {
         private mydbWordEntities db;
-        List<int> abc = new List<int>();
+        private List<int> List_ID = new List<int>();
         public Word[] GetWords()
         {
             db = new mydbWordEntities();
@@ -83,13 +83,13 @@ namespace YourDictionaryLibrary_Dat_Tan
             foreach (var item in Words)
             {
                 var c = db.Words.Find(item.Id);
-                abc.Add(c.Id);
+                List_ID.Add(c.Id);
             }
         }
-        public int RandomWord()
+        public int Random_ID()
         {
             Random rnd = new Random();
-            int month = abc[rnd.Next(abc.Count)];
+            int month = List_ID[rnd.Next(List_ID.Count)];
             return month;
         }
     }

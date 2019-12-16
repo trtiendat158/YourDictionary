@@ -32,7 +32,7 @@ namespace YourDictionaryLibrary_Dat_Tan
 
         private void BtnTest_Click(object sender, EventArgs e)
         {
-            var testing = new Testing_Words();
+            var testing = new Testing_Review_Words();
             testing.ShowDialog();
         }
         private void CbWord_Click(object sender, EventArgs e)

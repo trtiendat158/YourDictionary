@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace YourDictionaryLibrary_Dat_Tan
 {
-    public partial class Testing_Words : Form
+    public partial class Testing_Review_Words : Form
     {
         private Words_Management Business;
         int id1, id2, id3, id4, id5;
-        public Testing_Words()
+        public Testing_Review_Words()
         {
             InitializeComponent();
             this.Business = new Words_Management();
@@ -26,9 +26,9 @@ namespace YourDictionaryLibrary_Dat_Tan
         private void BtnReloadTest_Click(object sender, EventArgs e)
         {
             Testing_Words_Load(sender, e);
-            SetNull();
+            SetDefault();
         }
-        private void SetNull()
+        private void SetDefault()
         {
             txtAnswer1.Text = ""; txtAnswer2.Text = ""; txtAnswer3.Text = ""; txtAnswer4.Text = ""; txtAnswer5.Text = "";
             cboxTrue1.Checked = false; cboxTrue2.Checked = false;cboxTrue3.Checked = false;cboxTrue4.Checked = false;cboxTrue5.Checked = false;
@@ -50,16 +50,16 @@ namespace YourDictionaryLibrary_Dat_Tan
             Do_CheckedCheckBox(cboxTrue4, cboxFalse4, id4, txtAnswer4.Text);
             Do_CheckedCheckBox(cboxTrue5, cboxFalse5, id5, txtAnswer5.Text);
         }
-        private void Do_CheckedCheckBox(CheckBox rdTrue, CheckBox rdFalse, int id, string txtAnswer)
+        private void Do_CheckedCheckBox(CheckBox cboxTrue, CheckBox cboxFalse, int id, string txtAnswer)
         {
-            rdTrue.Checked = IsCheckAnswer(id, txtAnswer);
-            if (rdTrue.Checked == true)
+            cboxTrue.Checked = IsCheckAnswer(id, txtAnswer);
+            if (cboxTrue.Checked == true)
             {
-                rdFalse.Checked = false;
+                cboxFalse.Checked = false;
             }
             else
             {
-                rdFalse.Checked = true;
+                cboxFalse.Checked = true;
             }
         }
         private bool IsCheckAnswer(int ID, string txtAnswer)
@@ -69,25 +69,25 @@ namespace YourDictionaryLibrary_Dat_Tan
             else
                 return false;
         }
-        private int Avoid_Similar_id(int a, int b)
+        private int Avoid_Similar_id(int Firts_ID, int Second_ID)
         {
-            while (a == b)
+            while (Firts_ID == Second_ID)
             {
-                b = this.Business.RandomWord();
+                Second_ID = this.Business.Random_ID();
             }
-            return b;
+            return Second_ID;
         }
         private void Testing_Words_Load(object sender, EventArgs e)
         {
             this.Business.Add_ID_List();
-            id1 = this.Business.RandomWord();
-            id2 = this.Business.RandomWord();
+            id1 = this.Business.Random_ID();
+            id2 = this.Business.Random_ID();
             id2 = Avoid_Similar_id(id1, id2); ;
-            id3 = this.Business.RandomWord();
+            id3 = this.Business.Random_ID();
             id3 = Avoid_Similar_id(id2, id3); ;
-            id4 = this.Business.RandomWord();
+            id4 = this.Business.Random_ID();
             id4 = Avoid_Similar_id(id3, id4); ;
-            id5 = this.Business.RandomWord();
+            id5 = this.Business.Random_ID();
             id5 = Avoid_Similar_id(id4, id5); ;
 
             txtquestion1.Text = this.Business.GetWord(id1).Meaning;
