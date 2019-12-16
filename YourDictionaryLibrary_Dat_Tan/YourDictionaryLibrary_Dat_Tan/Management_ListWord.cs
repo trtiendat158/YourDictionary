@@ -24,7 +24,14 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnClose.Click += BtnClose_Click;
             this.grdW.CellClick += GrdW_CellClick;
             this.btnSearch_Word.Click += BtnSearch_Click;
-            this.txtSearch.KeyDown += TxtSearch_KeyDown;
+            this.cbSearch.KeyDown += CbSearch_KeyDown;
+        }
+        private void CbSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnSearch_Click(sender, e);
+            }
         }
         private bool CheckNull()
         {
@@ -36,13 +43,6 @@ namespace YourDictionaryLibrary_Dat_Tan
             }
             return true;
         }
-        private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnSearch_Word.PerformClick();
-            }
-        }
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             grdW.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -50,7 +50,7 @@ namespace YourDictionaryLibrary_Dat_Tan
             {
                 foreach (DataGridViewRow row in grdW.Rows)
                 {
-                    if (row.Cells[1].Value.ToString().Equals(txtSearch.Text.ToLower()))
+                    if (row.Cells[1].Value.ToString().Equals(cbSearch.Text.ToLower()))
                     {
                         row.Selected = true;
                         grdW.CurrentCell = row.Cells[1];
@@ -62,7 +62,6 @@ namespace YourDictionaryLibrary_Dat_Tan
                         return;
                     }
                 }
-                throw new Exception();
             }
             catch (Exception)
             {
@@ -86,6 +85,9 @@ namespace YourDictionaryLibrary_Dat_Tan
             grdW.AllowUserToResizeRows = false;
             grdW.ClearSelection();
             grdW.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.cbSearch.DataSource = this.Business.GetWords();
+            this.cbSearch.DisplayMember = "English_Word";
+            this.cbSearch.ValueMember = "ID";
         }
         private void BtnAdd_Click(object sender, EventArgs e)
         {
@@ -180,4 +182,3 @@ namespace YourDictionaryLibrary_Dat_Tan
         }
     }
 }
-//test data..
