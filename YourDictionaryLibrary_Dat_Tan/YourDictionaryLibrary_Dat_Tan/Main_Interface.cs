@@ -27,6 +27,13 @@ namespace YourDictionaryLibrary_Dat_Tan
             this.btnExport_and_Import_Data_Words.Click += btnExport_and_Import_Data_Words_Click;
             this.MaximizeBox = false;
             this.cbWord.Click += CbWord_Click;
+            this.btnTest.Click += BtnTest_Click;
+        }
+
+        private void BtnTest_Click(object sender, EventArgs e)
+        {
+            var testing = new Testing_Words();
+            testing.ShowDialog();
         }
         private void CbWord_Click(object sender, EventArgs e)
         {

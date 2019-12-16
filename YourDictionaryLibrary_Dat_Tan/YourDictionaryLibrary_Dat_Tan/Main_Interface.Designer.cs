@@ -37,6 +37,7 @@
             this.cbWord = new System.Windows.Forms.ComboBox();
             this.rtbMeaningW = new System.Windows.Forms.RichTextBox();
             this.btnExport_and_Import_Data_Words = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -48,7 +49,7 @@
             this.lblTitle.Location = new System.Drawing.Point(203, 41);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(515, 38);
+            this.lblTitle.Size = new System.Drawing.Size(409, 31);
             this.lblTitle.TabIndex = 31;
             this.lblTitle.Text = "YOUR DICTIONARY LIBRARY";
             // 
@@ -144,13 +145,23 @@
             this.btnExport_and_Import_Data_Words.Text = "   Export / Import";
             this.btnExport_and_Import_Data_Words.UseVisualStyleBackColor = true;
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(236, 348);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(183, 42);
+            this.btnTest.TabIndex = 48;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            // 
             // Main_Interface
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(786, 769);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnExport_and_Import_Data_Words);
             this.Controls.Add(this.rtbMeaningW);
             this.Controls.Add(this.cbWord);
@@ -180,6 +191,7 @@
         internal System.Windows.Forms.ComboBox cbWord;
         private System.Windows.Forms.RichTextBox rtbMeaningW;
         private System.Windows.Forms.Button btnExport_and_Import_Data_Words;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 
