@@ -130,9 +130,10 @@ namespace YourDictionaryLibrary_Dat_Tan
                     txtExport.Text = txtExport.Text + "\r\n";
                 }
                 var dialog = new SaveFileDialog();
+                dialog.Filter = "CSV UTF-8 (Comma delimited) (*.csv)|*.csv|Text file (*.txt)|*.txt";
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    File.WriteAllText(dialog.FileName + ".csv", txtExport.Text);
+                    File.WriteAllText(dialog.FileName, txtExport.Text);
                     MessageBox.Show("Export Successfully");
                 }
             }
